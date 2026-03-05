@@ -1,0 +1,80 @@
+\section{Knowledge Circuits Discovery in Transformers}
+\subsection{Knowledge Circuits Construction}
+Unlike previous work~\cite{dai-etal-2022-knowledge,meng2022locating}, which managed to find out the specific areas that store knowledge, we pay extra heed to the information flow that activates subsequent knowledge for answering questions.
+Similar to \cite{goldowsky2023localizing, wang2023interpretability}, we write language model as a graph consisting of the input, the output, attention heads, and MLPs by considering a ``residual rewrite'' of the model's computational structure.
+For example, this residual rewrite gives us a nearly-dense graph in GPT2-medium: one between every pair of (attention head, MLP, input, and output) nodes, except for attention heads in the same layer, which do not communicate with each other.
+% $A(\mathbf{r})=\left(\operatorname{softmax}\left(\mathbf{r}^{\top} W_Q^{\top} W_K \mathbf{r}\right) \otimes W_O W_V\right) \cdot \mathbf{r}$
+% We can write any model as a connected directed acyclic graph (DAG) with source nodes representing the model’s (typically vector-valued) input, sink nodes representing the model’s output, and intermediate nodes representing units of computation.
+In our paper, we concentrate on the task of answering factual open-domain questions, where the goal is to predict a target entity $o$ given a subject-relation pair $(s, r)$.
+A knowledge triplet $k=(s, r, o)$ is often presented to the model in the form of a natural language prompt for next token prediction (e.g.,  \nl{The official language of France is \textunderscore\textunderscore\textunderscore\textunderscore}). 
+The model $\mathcal{G}$ is expected to generate the target entity, which is consistent with the language model's pretraining format.
+To identify the circuit that is critical for predicting the target entity $o$ for a given subject-relation pair $(s, r)$, we ablate each special edge $e_{i} = (n_{x},n_{y})$ in the computation graph $\mathcal{G}$. 
+We then measure the impact of ablating the edge (\textbf{zero ablation} in our implementation) on the model's performance using the MatchNLL loss \cite{acdc} for the target $o$:
+\begin{equation}
+    S(e_{i}) =  \log(\mathcal{G}(o|(s,r)))- \log(\mathcal{G}/e_{i}(o|(s,r)))
+    \label{metric_S}
+\end{equation}
+If the score $S(e_{i})$ is less than the predefined threshold $\tau$, we consider the edge to be non-critical and remove it from the computation graph, updating the temporary circuit $\mathcal{C}_{temp} \leftarrow\mathcal{G}/e_{i}$. 
+We first sort the graph by topological rank following \citet{acdc} and  traverse all edges in this manner, We derive a circuit $\mathcal{C}_{k}$ that contributes to representing the knowledge necessary to answer the factual question:
+\begin{equation}
+    \mathcal{C}_{k} = <N_{k}, E_{k}>
+\end{equation}
+Here, $\mathcal{C}_{k}$ is the circuit for the knowledge triplet $k$, consisting of the nodes $N_{k}$ and edges $E_{k}$ that are essential for predicting the target entity $o$ given the subject-relation pair $(s, r)$.
+
+
+\subsection{Knowledge Circuits Information Analysis}
+Once we have identified the knowledge circuit, we delve deeper into the specific roles and behaviors of each node and edge within the computation graph. 
+Our goal is to comprehend the processing and contribution of each node $n_{i}$ to the functionality of the circuit.
+Drawing on the methodologies of previous studies \cite{yu2024locating,katz-belinkov-2023-visit,nostalgebraist_interpreting_nodate}, we begin by applying layer normalization to the output of each node $n_{i}$ and then map it into the embedding space. 
+This is achieved by multiplying the layer-normalized output by the unembedding matrix ($\mathbf{W}_U$) of the language model:
+$\mathbf{W}_U \operatorname{LN}(n_{i})$.
+This transformation allows us to inspect how each component writes information to the circuit and how it influences subsequent computational steps. 
+% Additionally, we measure the difference between the input and output of the node when mapped into the embedding space to discern the type of information processing that occurs:$\mathbf{W}_U \operatorname{LN}(n_{i})$.
+By understanding the nodes' behavior in the circuit, we can better comprehend the circuit's structure and the key points where information is aggregated and disseminated.
+% $\Delta n_{i} = \mathbf{W}_U \operatorname{LN}(n_{i}) - \mathbf{W}_U \operatorname{LN}(\text{Input}(n_{i}))$
+% Furthermore, we analyze the in-degree and out-degree of the nodes within the circuit to identify the most critical nodes and to search for potential bottlenecks in the flow of information.
+
+\input{Table/completeness}
+
+\subsection{Knowledge Circuits Experimental Settings}
+
+
+% \paragraph{Faithfulness}
+% Faithfulness refers to the consistency of the knowledge circuit across different expressions of the same knowledge. To assess faithfulness, we examine whether circuits obtained from different knowledge prompts $\mathcal{C}_{P1}$ and $\mathcal{C}_{P2}$ are similar. This is quantified using a similarity measure $S$:
+% \begin{equation}
+%     S(\mathcal{C}_{P1}, \mathcal{C}_{P2})
+% \end{equation}
+% A high degree of similarity between circuits derived from different prompts indicates a faithful representation of the underlying knowledge, as the circuit should capture the essential components of the knowledge regardless of how it is expressed.
+
+
+
+\paragraph{Implementations.}
+\label{subsec:exp_setting}
+We conduct experiments on GPT-style models, including GPT-2 medium and large.
+We also conduct primary experiments on TinyLLaMA \cite{zhang2024tinyllama} to validate the effectiveness of different architectures.
+We utilize the Automated Circuit Discovery \cite{acdc} toolkit to build a circuit as an initiative of our analysis and leverage transformer lens \cite{nanda2022transformerlens} to further analyze the results.
+Specifically, we simply employ the MatchNLL \cite{acdc} as the metric to detect the effect of the given node and edge and use \textbf{zero ablation} to knock out the specific computation node in the model's computation graph.
+
+\paragraph{Metrics.}
+
+
+A discovered knowledge circuit is deemed an accurate representation of a specific area within the transformer's knowledge storage, thus, it should be capable of representing the knowledge independently.
+Following \cite{acdc}, we leverage the completeness of a circuit, which refers to its ability to independently reproduce the behavior or predictions of the full model for the relevant tasks. 
+This property is assessed by examining whether the identified subgraph corresponds to the underlying algorithm implemented by the neural network. 
+To evaluate completeness, we first construct the circuit using the validation data $D_{val}$ for a specific knowledge type and then test its performance on the test split $D_{test}$ in isolation. 
+By doing so, we can observe any changes in performance compared to the original model. 
+We use the \texttt{\textbf{Hit@10}} metric to measure the rank of the target entity $o$ among the top 10 predicted tokens:
+\begin{equation}
+\texttt{\textbf{Hit@10}}=\frac{1}{|V|} \sum_{i=1}^{|V|} \mathrm{I}\left(\operatorname{rank}_{o} \leq 10\right)
+\end{equation}
+Here, $|V|$ represents vocabulary size, and $\operatorname{rank}_{o}$ is the rank of the target entity $o$ in predictions.
+
+% check 是否
+
+
+\paragraph{Dataset.}
+In this work, we focus on the \textbf{knowledge that is already stored in the language model}.
+We utilize the dataset provided by LRE~\cite{hernandez2024linearity} and consider different kinds of knowledge, including linguistic, commonsense, fact, and bias.
+We evaluate whether the knowledge is present in the language model's parameters under zero-shot settings using the \texttt{\textbf{Hit@10}} metric to sample knowledge from the validation set, which is used to construct the knowledge circuit.
+The data statistics are in Appendix~\ref{app_sec:implem_details}. 
+

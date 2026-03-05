@@ -1,0 +1,26 @@
+\addtolength{\tabcolsep}{-3pt}
+\begin{wraptable}{r}{0.50\textwidth}
+    \centering
+    % \vspace{-22pt}
+    \scriptsize
+    \vspace{-8pt}
+    \begin{adjustbox}{width=0.50\textwidth}
+        \begin{tabular}{lcccc}
+        \toprule
+        \textbf{Category} & \textbf{\# Rel.} & \textbf{\# Examples} & \textbf{\# GPT-2 Corr.} \\
+        \midrule
+        Factual & 26 & 9,696 & 4,721 \\
+        Commonsense & 8 & 374 & 240 \\
+        Linguistic & 6 & 806 & 483 \\
+        Bias & 7 & 213 & 149 \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{\small Information about the dataset.
+    %Evaluation is always restricted to the subset of ($\subj$, $\rel$, $\obj$) triples for which the LM successfully decodes $\obj$ when prompted with ($\subj$, $\rel$). 
+    Table is borrowed from \citet{hernandez2024linearity}}
+    % \vspace{1pt}
+    \label{tab:dataset}
+    \vspace{-15pt}
+\end{wraptable}
+\addtolength{\tabcolsep}{3pt}

@@ -1,0 +1,26 @@
+\begin{table}[ht]
+\small
+\vspace{-3mm}
+    \centering
+    \small
+    % \renewcommand{\arraystretch}{1.3}
+    \caption{Special component behaviour in circuits as task-specific head. Find more results in Appendix}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Model}  & \textbf{Type} & \textbf{Fact} & \textbf{Critical Component in Circuit} \\ \midrule
+    \multirow{4}{*}{GPT2-Medium}& Linguistic  & Antonym   & L17H2, L18H1, L13H12, L13H8 \\
+    & Factual & city country & L21H12, L16H2 \\
+    & Commonsense & work location & L19H15, L14H4, L13H3 \\
+    & Bias & name country & L16H6, L21H12 \\ \midrule
+    \multirow{4}{*}{GPT2-Large}  & Linguistic &  Antonym & L25H5, L24H16, L19H13, L18H8\\
+      &  Factual  & company hq & L30H6, L25H13 \\
+      &  Commonsense  & work location & L18H13, L28H18, L30H5 \\ 
+      &  Bias  & name country & L21H19, L29H2 \\ \midrule
+    \multirow{4}{*}{TinyLLAMA} & Linguistic  & Verb past tense  & L17H0, MLP20 \\
+      &  Factual  &   Landmark country & L15H11, L17H19, MLP18 \\
+       &  Commonsense  & Fruit Inside Color  & L18H25, MLP18\\
+        &  Bias  & name country    & L15H11, MLP17 \\ \bottomrule
+    \end{tabular}}
+    \label{tab:component}
+\end{table}

@@ -1,0 +1,258 @@
+[
+  {
+    "q": 2,
+    "seq_len": 247,
+    "corr_margin": -2.890625,
+    "corr_logprob_tool": -3.7255196571350098,
+    "clean_logprob_tool": -0.08592341840267181,
+    "sample_index": 0
+  },
+  {
+    "q": 3,
+    "seq_len": 266,
+    "corr_margin": -4.03125,
+    "corr_logprob_tool": -4.620811939239502,
+    "clean_logprob_tool": -0.25296658277511597,
+    "sample_index": 1
+  },
+  {
+    "q": 4,
+    "seq_len": 241,
+    "corr_margin": -1.375,
+    "corr_logprob_tool": -1.989102840423584,
+    "clean_logprob_tool": -0.032114800065755844,
+    "sample_index": 2
+  },
+  {
+    "q": 5,
+    "seq_len": 254,
+    "corr_margin": -5.578125,
+    "corr_logprob_tool": -6.056719779968262,
+    "clean_logprob_tool": -0.08377918601036072,
+    "sample_index": 3
+  },
+  {
+    "q": 7,
+    "seq_len": 233,
+    "corr_margin": -1.078125,
+    "corr_logprob_tool": -1.5827884674072266,
+    "clean_logprob_tool": -0.05425120145082474,
+    "sample_index": 4
+  },
+  {
+    "q": 9,
+    "seq_len": 232,
+    "corr_margin": -0.984375,
+    "corr_logprob_tool": -1.4865334033966064,
+    "clean_logprob_tool": -0.054282139986753464,
+    "sample_index": 5
+  },
+  {
+    "q": 10,
+    "seq_len": 249,
+    "corr_margin": -1.078125,
+    "corr_logprob_tool": -1.6596812009811401,
+    "clean_logprob_tool": -0.06823385506868362,
+    "sample_index": 6
+  },
+  {
+    "q": 11,
+    "seq_len": 249,
+    "corr_margin": -3.8125,
+    "corr_logprob_tool": -4.189727306365967,
+    "clean_logprob_tool": -0.19267380237579346,
+    "sample_index": 7
+  },
+  {
+    "q": 13,
+    "seq_len": 233,
+    "corr_margin": -1.453125,
+    "corr_logprob_tool": -2.128490686416626,
+    "clean_logprob_tool": -0.07745854556560516,
+    "sample_index": 8
+  },
+  {
+    "q": 14,
+    "seq_len": 230,
+    "corr_margin": -4.03125,
+    "corr_logprob_tool": -4.285843372344971,
+    "clean_logprob_tool": -0.8622474670410156,
+    "sample_index": 9
+  },
+  {
+    "q": 15,
+    "seq_len": 212,
+    "corr_margin": -3.546875,
+    "corr_logprob_tool": -3.8774304389953613,
+    "clean_logprob_tool": -0.17971676588058472,
+    "sample_index": 10
+  },
+  {
+    "q": 16,
+    "seq_len": 210,
+    "corr_margin": -4.84375,
+    "corr_logprob_tool": -4.983492851257324,
+    "clean_logprob_tool": -0.8978056311607361,
+    "sample_index": 11
+  },
+  {
+    "q": 17,
+    "seq_len": 213,
+    "corr_margin": -4.203125,
+    "corr_logprob_tool": -4.399027347564697,
+    "clean_logprob_tool": -0.23565950989723206,
+    "sample_index": 12
+  },
+  {
+    "q": 18,
+    "seq_len": 212,
+    "corr_margin": -2.4375,
+    "corr_logprob_tool": -2.8228864669799805,
+    "clean_logprob_tool": -0.17452490329742432,
+    "sample_index": 13
+  },
+  {
+    "q": 19,
+    "seq_len": 323,
+    "corr_margin": -5.28125,
+    "corr_logprob_tool": -5.949316024780273,
+    "clean_logprob_tool": -0.7386898994445801,
+    "sample_index": 14
+  },
+  {
+    "q": 20,
+    "seq_len": 216,
+    "corr_margin": -0.40625,
+    "corr_logprob_tool": -1.2903355360031128,
+    "clean_logprob_tool": -0.07081720978021622,
+    "sample_index": 15
+  },
+  {
+    "q": 21,
+    "seq_len": 256,
+    "corr_margin": -4.171875,
+    "corr_logprob_tool": -4.5998945236206055,
+    "clean_logprob_tool": -0.06673244386911392,
+    "sample_index": 16
+  },
+  {
+    "q": 22,
+    "seq_len": 268,
+    "corr_margin": -6.5625,
+    "corr_logprob_tool": -7.835307598114014,
+    "clean_logprob_tool": -0.6549321413040161,
+    "sample_index": 17
+  },
+  {
+    "q": 23,
+    "seq_len": 276,
+    "corr_margin": -3.875,
+    "corr_logprob_tool": -4.283567428588867,
+    "clean_logprob_tool": -0.22333990037441254,
+    "sample_index": 18
+  },
+  {
+    "q": 25,
+    "seq_len": 191,
+    "corr_margin": -1.03125,
+    "corr_logprob_tool": -1.588523268699646,
+    "clean_logprob_tool": -0.008896357379853725,
+    "sample_index": 19
+  },
+  {
+    "q": 26,
+    "seq_len": 209,
+    "corr_margin": -2.765625,
+    "corr_logprob_tool": -3.218780040740967,
+    "clean_logprob_tool": -0.13288065791130066,
+    "sample_index": 20
+  },
+  {
+    "q": 28,
+    "seq_len": 235,
+    "corr_margin": -3.625,
+    "corr_logprob_tool": -3.9133527278900146,
+    "clean_logprob_tool": -0.2007134109735489,
+    "sample_index": 21
+  },
+  {
+    "q": 30,
+    "seq_len": 202,
+    "corr_margin": -2.171875,
+    "corr_logprob_tool": -2.4169414043426514,
+    "clean_logprob_tool": -0.05415171757340431,
+    "sample_index": 22
+  },
+  {
+    "q": 31,
+    "seq_len": 227,
+    "corr_margin": -1.15625,
+    "corr_logprob_tool": -1.6008648872375488,
+    "clean_logprob_tool": -0.05688630789518356,
+    "sample_index": 23
+  },
+  {
+    "q": 32,
+    "seq_len": 245,
+    "corr_margin": -3.015625,
+    "corr_logprob_tool": -3.436542272567749,
+    "clean_logprob_tool": -0.04189986735582352,
+    "sample_index": 24
+  },
+  {
+    "q": 33,
+    "seq_len": 198,
+    "corr_margin": -7.203125,
+    "corr_logprob_tool": -7.405324459075928,
+    "clean_logprob_tool": -0.49254095554351807,
+    "sample_index": 25
+  },
+  {
+    "q": 36,
+    "seq_len": 233,
+    "corr_margin": -1.46875,
+    "corr_logprob_tool": -1.8464467525482178,
+    "clean_logprob_tool": -0.026823176071047783,
+    "sample_index": 26
+  },
+  {
+    "q": 37,
+    "seq_len": 226,
+    "corr_margin": -3.3125,
+    "corr_logprob_tool": -3.604153871536255,
+    "clean_logprob_tool": -0.07533376663923264,
+    "sample_index": 27
+  },
+  {
+    "q": 38,
+    "seq_len": 214,
+    "corr_margin": -2.5,
+    "corr_logprob_tool": -3.583982229232788,
+    "clean_logprob_tool": -0.4523662328720093,
+    "sample_index": 28
+  },
+  {
+    "q": 39,
+    "seq_len": 256,
+    "corr_margin": -0.96875,
+    "corr_logprob_tool": -1.5518397092819214,
+    "clean_logprob_tool": -0.03144951909780502,
+    "sample_index": 29
+  },
+  {
+    "q": 41,
+    "seq_len": 240,
+    "corr_margin": -5.21875,
+    "corr_logprob_tool": -6.236364364624023,
+    "clean_logprob_tool": -0.33353185653686523,
+    "sample_index": 30
+  },
+  {
+    "q": 43,
+    "seq_len": 246,
+    "corr_margin": -3.875,
+    "corr_logprob_tool": -4.0729265213012695,
+    "clean_logprob_tool": -0.021159270778298378,
+    "sample_index": 31
+  }
+]

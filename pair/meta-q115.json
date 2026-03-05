@@ -1,0 +1,377 @@
+{
+  "q": 115,
+  "tokenizer_path": "/root/data/Qwen/Qwen3-1.7B",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "indexing": "0-based, token_end_exclusive",
+  "alignment": {
+    "clean_tokens": 244,
+    "corrupted_tokens": 244,
+    "delta_corr_minus_clean": 0,
+    "aligned": true
+  },
+  "clean": {
+    "file": "/root/data/XAI-0.6B/data/pair/prompt-clean-q115.txt",
+    "num_tokens": 244,
+    "segments": [
+      {
+        "name": "system_block",
+        "char_start": 0,
+        "char_end_exclusive": 620,
+        "token_start": 0,
+        "token_end_exclusive": 129
+      },
+      {
+        "name": "tools_definition",
+        "char_start": 170,
+        "char_end_exclusive": 407,
+        "token_start": 35,
+        "token_end_exclusive": 89
+      },
+      {
+        "name": "tool_call_instruction",
+        "char_start": 408,
+        "char_end_exclusive": 526,
+        "token_start": 89,
+        "token_end_exclusive": 110
+      },
+      {
+        "name": "tool_call_example",
+        "char_start": 527,
+        "char_end_exclusive": 610,
+        "token_start": 110,
+        "token_end_exclusive": 128
+      },
+      {
+        "name": "user_block",
+        "char_start": 621,
+        "char_end_exclusive": 982,
+        "token_start": 130,
+        "token_end_exclusive": 236
+      },
+      {
+        "name": "user_instruction",
+        "char_start": 638,
+        "char_end_exclusive": 726,
+        "token_start": 133,
+        "token_end_exclusive": 150
+      },
+      {
+        "name": "function_signature",
+        "char_start": 727,
+        "char_end_exclusive": 752,
+        "token_start": 150,
+        "token_end_exclusive": 157
+      },
+      {
+        "name": "function_docstring",
+        "char_start": 757,
+        "char_end_exclusive": 961,
+        "token_start": 158,
+        "token_end_exclusive": 232
+      },
+      {
+        "name": "function_pass_line",
+        "char_start": 962,
+        "char_end_exclusive": 970,
+        "token_start": 232,
+        "token_end_exclusive": 234
+      },
+      {
+        "name": "assistant_block",
+        "char_start": 983,
+        "char_end_exclusive": 1024,
+        "token_start": 237,
+        "token_end_exclusive": 244
+      },
+      {
+        "name": "assistant_think_open",
+        "char_start": 1005,
+        "char_end_exclusive": 1012,
+        "token_start": 240,
+        "token_end_exclusive": 241
+      },
+      {
+        "name": "assistant_think_close",
+        "char_start": 1014,
+        "char_end_exclusive": 1022,
+        "token_start": 242,
+        "token_end_exclusive": 243
+      }
+    ],
+    "key_spans": {
+      "<tool_call>": [
+        {
+          "text": "<tool_call>",
+          "char_start": 493,
+          "char_end_exclusive": 504,
+          "token_start": 105,
+          "token_end_exclusive": 106
+        },
+        {
+          "text": "<tool_call>",
+          "char_start": 527,
+          "char_end_exclusive": 538,
+          "token_start": 110,
+          "token_end_exclusive": 111
+        }
+      ],
+      "</tool_call>": [
+        {
+          "text": "</tool_call>",
+          "char_start": 504,
+          "char_end_exclusive": 516,
+          "token_start": 106,
+          "token_end_exclusive": 107
+        },
+        {
+          "text": "</tool_call>",
+          "char_start": 598,
+          "char_end_exclusive": 610,
+          "token_start": 127,
+          "token_end_exclusive": 128
+        }
+      ],
+      "write_file": [
+        {
+          "text": "write_file",
+          "char_start": 217,
+          "char_end_exclusive": 227,
+          "token_start": 47,
+          "token_end_exclusive": 49
+        }
+      ],
+      "Write": [
+        {
+          "text": "Write",
+          "char_start": 244,
+          "char_end_exclusive": 249,
+          "token_start": 52,
+          "token_end_exclusive": 53
+        },
+        {
+          "text": "Write",
+          "char_start": 638,
+          "char_end_exclusive": 643,
+          "token_start": 133,
+          "token_end_exclusive": 134
+        }
+      ],
+      "State": [],
+      "<tools>": [
+        {
+          "text": "<tools>",
+          "char_start": 144,
+          "char_end_exclusive": 151,
+          "token_start": 27,
+          "token_end_exclusive": 30
+        },
+        {
+          "text": "<tools>",
+          "char_start": 170,
+          "char_end_exclusive": 177,
+          "token_start": 35,
+          "token_end_exclusive": 38
+        }
+      ],
+      "</tools>": [
+        {
+          "text": "</tools>",
+          "char_start": 151,
+          "char_end_exclusive": 159,
+          "token_start": 29,
+          "token_end_exclusive": 32
+        },
+        {
+          "text": "</tools>",
+          "char_start": 398,
+          "char_end_exclusive": 406,
+          "token_start": 86,
+          "token_end_exclusive": 89
+        }
+      ]
+    }
+  },
+  "corrupted": {
+    "file": "/root/data/XAI-0.6B/data/pair/prompt-corrupted-q115.txt",
+    "num_tokens": 244,
+    "segments": [
+      {
+        "name": "system_block",
+        "char_start": 0,
+        "char_end_exclusive": 620,
+        "token_start": 0,
+        "token_end_exclusive": 129
+      },
+      {
+        "name": "tools_definition",
+        "char_start": 170,
+        "char_end_exclusive": 407,
+        "token_start": 35,
+        "token_end_exclusive": 89
+      },
+      {
+        "name": "tool_call_instruction",
+        "char_start": 408,
+        "char_end_exclusive": 526,
+        "token_start": 89,
+        "token_end_exclusive": 110
+      },
+      {
+        "name": "tool_call_example",
+        "char_start": 527,
+        "char_end_exclusive": 610,
+        "token_start": 110,
+        "token_end_exclusive": 128
+      },
+      {
+        "name": "user_block",
+        "char_start": 621,
+        "char_end_exclusive": 982,
+        "token_start": 130,
+        "token_end_exclusive": 236
+      },
+      {
+        "name": "user_instruction",
+        "char_start": 638,
+        "char_end_exclusive": 726,
+        "token_start": 133,
+        "token_end_exclusive": 150
+      },
+      {
+        "name": "function_signature",
+        "char_start": 727,
+        "char_end_exclusive": 752,
+        "token_start": 150,
+        "token_end_exclusive": 157
+      },
+      {
+        "name": "function_docstring",
+        "char_start": 757,
+        "char_end_exclusive": 961,
+        "token_start": 158,
+        "token_end_exclusive": 232
+      },
+      {
+        "name": "function_pass_line",
+        "char_start": 962,
+        "char_end_exclusive": 970,
+        "token_start": 232,
+        "token_end_exclusive": 234
+      },
+      {
+        "name": "assistant_block",
+        "char_start": 983,
+        "char_end_exclusive": 1024,
+        "token_start": 237,
+        "token_end_exclusive": 244
+      },
+      {
+        "name": "assistant_think_open",
+        "char_start": 1005,
+        "char_end_exclusive": 1012,
+        "token_start": 240,
+        "token_end_exclusive": 241
+      },
+      {
+        "name": "assistant_think_close",
+        "char_start": 1014,
+        "char_end_exclusive": 1022,
+        "token_start": 242,
+        "token_end_exclusive": 243
+      }
+    ],
+    "key_spans": {
+      "<tool_call>": [
+        {
+          "text": "<tool_call>",
+          "char_start": 493,
+          "char_end_exclusive": 504,
+          "token_start": 105,
+          "token_end_exclusive": 106
+        },
+        {
+          "text": "<tool_call>",
+          "char_start": 527,
+          "char_end_exclusive": 538,
+          "token_start": 110,
+          "token_end_exclusive": 111
+        }
+      ],
+      "</tool_call>": [
+        {
+          "text": "</tool_call>",
+          "char_start": 504,
+          "char_end_exclusive": 516,
+          "token_start": 106,
+          "token_end_exclusive": 107
+        },
+        {
+          "text": "</tool_call>",
+          "char_start": 598,
+          "char_end_exclusive": 610,
+          "token_start": 127,
+          "token_end_exclusive": 128
+        }
+      ],
+      "write_file": [
+        {
+          "text": "write_file",
+          "char_start": 217,
+          "char_end_exclusive": 227,
+          "token_start": 47,
+          "token_end_exclusive": 49
+        }
+      ],
+      "Write": [
+        {
+          "text": "Write",
+          "char_start": 244,
+          "char_end_exclusive": 249,
+          "token_start": 52,
+          "token_end_exclusive": 53
+        }
+      ],
+      "State": [
+        {
+          "text": "State",
+          "char_start": 638,
+          "char_end_exclusive": 643,
+          "token_start": 133,
+          "token_end_exclusive": 134
+        }
+      ],
+      "<tools>": [
+        {
+          "text": "<tools>",
+          "char_start": 144,
+          "char_end_exclusive": 151,
+          "token_start": 27,
+          "token_end_exclusive": 30
+        },
+        {
+          "text": "<tools>",
+          "char_start": 170,
+          "char_end_exclusive": 177,
+          "token_start": 35,
+          "token_end_exclusive": 38
+        }
+      ],
+      "</tools>": [
+        {
+          "text": "</tools>",
+          "char_start": 151,
+          "char_end_exclusive": 159,
+          "token_start": 29,
+          "token_end_exclusive": 32
+        },
+        {
+          "text": "</tools>",
+          "char_start": 398,
+          "char_end_exclusive": 406,
+          "token_start": 86,
+          "token_end_exclusive": 89
+        }
+      ]
+    }
+  }
+}

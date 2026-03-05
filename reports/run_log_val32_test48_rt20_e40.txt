@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-03-05 13:30:30",
+  "model_path": "/root/data/Qwen/Qwen3-1.7B",
+  "tool_token_id": 151657,
+  "n_total_pairs": 164,
+  "n_balanced_pairs": 117,
+  "n_analysis_pairs": 32,
+  "n_completeness_pairs_d_val": 32,
+  "n_completeness_pairs_d_test": 48,
+  "d_test_reuses_d_val": false,
+  "completeness_primary_split": "D_test",
+  "baseline": {
+    "ToolCall@1_clean": 0.8841463414634146,
+    "ToolCall@1_corr": 0.17073170731707318,
+    "Reject@1_corr": 0.8292682926829268,
+    "Balanced": 0.7134146341463414
+  },
+  "best_tau": 0.005,
+  "best_completeness": {
+    "full_model": {
+      "ToolCall@1_clean": 1.0,
+      "Reject@1_corr": 1.0,
+      "Balanced": 1.0
+    },
+    "circuit": {
+      "ToolCall@1_clean": 0.7083333333333334,
+      "Reject@1_corr": 0.4791666666666667,
+      "Balanced": 0.20833333333333334
+    },
+    "random_same_size": {
+      "ToolCall@1_clean": 0.49375,
+      "Reject@1_corr": 0.21875,
+      "Balanced": 0.005208333333333333
+    },
+    "split": "D_test",
+    "edge_ratio": 0.08403361344537816,
+    "delta_balanced_vs_random": 0.203125,
+    "p_balanced_vs_random": 0.047619047619047616,
+    "p_objective_vs_random": 0.047619047619047616,
+    "objective_gap_vs_random": 0.298125,
+    "D_val_delta_balanced_vs_random": 0.2171875,
+    "D_test_delta_balanced_vs_random": 0.203125
+  },
+  "top_probe_head": "L18H3",
+  "probe": {
+    "prob_base": 0.9837362170219421,
+    "prob_ablate": 0.9984492063522339,
+    "rank_base": 1,
+    "rank_ablate": 1
+  },
+  "sanity": {
+    "ap_top10_mean": 2.048681640625,
+    "ct_top10_mean": 2.05009765625,
+    "deltaS_top10_mean": 2.8242693098436575,
+    "best_tau": 0.005,
+    "best_objective_gap_vs_random": 0.32875000000000004,
+    "best_balanced_circuit": 0.20833333333333334,
+    "best_balanced_random": 0.005208333333333333,
+    "best_keep_heads": 26,
+    "best_keep_mlps": 14,
+    "best_edge_ratio": 0.08403361344537816,
+    "primary_completeness_split": "D_test",
+    "best_p_balanced_vs_random": 0.047619047619047616,
+    "best_p_objective_vs_random": 0.047619047619047616,
+    "candidate_ablation_best_drop": -0.008981525897979736,
+    "probe_prob_drop": -0.014712989330291748,
+    "probe_rank_increase": 0.0,
+    "probe_device": "cuda"
+  },
+  "gpu_before": {
+    "name": "NVIDIA GeForce RTX 4090",
+    "mem_total": "24564 MiB",
+    "mem_used": "4 MiB",
+    "util": "0 %"
+  },
+  "gpu_after": {
+    "name": "NVIDIA GeForce RTX 4090",
+    "mem_total": "24564 MiB",
+    "mem_used": "494 MiB",
+    "util": "0 %"
+  },
+  "dtype": "float16",
+  "batch_size_baseline": 2,
+  "non_circuit_retain": 0.7,
+  "max_circuit_edges": 40,
+  "random_trials": 20,
+  "peak_cuda_mem_gb": 4.840816497802734,
+  "elapsed_sec": 920.0891029834747
+}

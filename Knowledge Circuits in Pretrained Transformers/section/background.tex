@@ -1,0 +1,39 @@
+\section{Background: Circuit Theory}
+\subsection{Preliminaries} 
+In the context of neural network interpretability, a circuit can be conceptualized as a human-interpretable subgraph that is dedicated to executing specific tasks within a neural network model \cite{olah2020zoom,wang2023interpretability,lv2024interpreting,acdc,bereska2024mechanistic}. 
+When we visualize a neural network model as a connected directed acyclic graph (DAG), denoted as $\mathcal{G}$, the individual nodes represent the various components involved in the forward pass, such as neurons, attention heads, and embeddings. 
+The edges symbolize the interactions between these components, including residual connections, attention mechanisms, and projections. 
+A circuit, represented as $\mathcal{C} \subseteq \mathcal{G}$, emerges as a significant subgraph of $\mathcal{G}$ that is responsible for particular behaviors or functionalities.
+In this paper, we focus on the Transformer decoder architecture to conduct our experiments. 
+The residual stream of Transformers has been demonstrated to be a valuable tool for mechanistic interpretability in recent works \cite{elhage2021mathematical,yu2024locating}. 
+The Transformer architecture typically starts with token embeddings, followed by a sequence of ``residual blocks'' and concludes with a token unembedding. 
+Each residual block comprises an attention layer and an MLP layer, both of which ``read'' their input from the residual stream (via a linear projection) and ``write'' their output back to the residual stream through an additive projection.
+We can consider an attention head $A_{l,j}$ (the $j$th attention head in layer $l$) as operating on the residual stream from the previous layer, $R_{l-1}$. 
+Given that $R_0=I$ (where $I$ represents the input embeddings), we can reinterpret attention head $A_{l,j}$ as processing the cumulative output of all previous attention heads and MLPs and input embedding, treating each node in the previous layers as separate input arguments. 
+Similarly, an MLP node $M_l$ can be seen as operating on the cumulative output of all previous attention heads and MLPs and input embedding, and the output node $O$ operates on the sum of the input embeddings and the outputs of all attention heads and MLPs.
+The following equations represent the residual connections in the Transformer model, where $R_l$ is the residual stream at layer $l$, and $\text{Input}^A_l$ and $\text{Input}^M_l$ are the inputs to the attention and MLP layers, respectively:
+\begin{align*}
+R_l = R_{l-1}+\sum_j A_{l,j}+M_l, R_{0} = I \\
+\text{Input}^A_l = I+\sum_{l'<l} \left(M_{l'}+\sum_{j'} A_{l',j'}\right) \\
+\text{Input}^M_l=I+\sum_{l'<l}M_{i'} + \sum_{l'\leq i}\sum_{j'}A_{l',j'}
+\end{align*}
+The computational graph $\mathcal{G}$ of the Transformer represents the interactions between attention heads and MLPs. 
+The nodes in $\mathcal{G}$ encompass the input embedding $I$, attention heads $A_{l,j}$, MLPs $M_l$, and the output node $O$, denoted as $N = \{I, A_{l,j}, M_{l}, O\}$.
+The edges in the model represent the connections between these nodes, $E = \{(n_{x}, n_{y}), n_{x}, n_{y} \in N\}$.
+A circuit $\mathcal{C}$ is meticulously constructed to govern specific behaviors within the model, comprising a selection of nodes $N_{\mathcal{C}}$ and edges $E_{\mathcal{C}}$ that are critical to the successful execution of the tasks at hand, expressed as $\mathcal{C} = <N_{\mathcal{C}}, E_{\mathcal{C}}>$.
+% Let's denote the OV matrix as $\mathbf{W}_{O V}=\mathbf{W}_O \mathbf{W}_V$ and the $\mathrm{QK}$ matrix as $\mathbf{W}_{Q K}=\mathbf{W}_Q^{\top} \mathbf{W}_K$, for clarity. The parameters represented by $\mathbf{W}_{O V}$ generate outputs corresponding to inputs; The parameters represented by $\mathbf{W}_{Q K}$ generate attention patterns, determining which token's information is moved from and to.
+\subsection{Circuit Discovery}
+To identify circuits within a language model, a key approach is to examine the model's casual mediation by systematically altering the model's edges and nodes to observe the effects on performance \cite{acdc,pearl2022direct,vig2020investigating}. 
+The underlying principle is that critical edges or nodes are those whose removal results in a notable decline in the model's predictive capabilities.
+Since the edges in the model's computational graph represent the dependencies between nodes, we can simulate the absence of a particular node-to-node dependency by ablating an edge in the graph.
+For example, ablating an edge from $A_{i',j'}$ to $A_{i,j}$ involves replacing the contribution of $A_{i',j'}$ in the input to attention head $A_{i,j}$ with zero (in the case of zero ablation) or with the mean value of head $A_{i',j'}$ (in the case of mean ablation).
+The process of identifying critical edges or nodes through ablation can be broken down into the following steps:
+i) Overwrite the value of the edge $(n_{x},n_{y})$ with a corrupted value (either zero or mean ablation),
+ii) Perform a forward pass through the model with the altered graph,
+iii) Compare the output values of the modified model with those of the original model using a chosen metric $S$ (Details in Eq.\ref{metric_S} ).
+% If the performance change lower than the threshold $\tau$, we can remove the edge and obtain a new subgraph $\mathcal{G}/{(n_{x},n_{y})}$.
+If the performance change is below a predefined threshold $\tau$, we can consider the edge non-critical and remove it to obtain a new subgraph $\mathcal{G}/{(n_{x},n_{y})}$.
+In addition to ablation-based methods, recent works have also explored the use of sparse auto-encoders \cite{he2024dictionary,cunningham2023sparse} to identify circuits within language models. 
+This approach involves training an auto-encoder to learn a sparse representation of the model's internal structure, which can help reveal the underlying circuitry responsible for specific behaviors or functionalities.
+
+

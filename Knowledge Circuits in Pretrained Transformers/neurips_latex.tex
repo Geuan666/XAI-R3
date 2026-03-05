@@ -1,0 +1,243 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass{article}
+
+
+% if you need to pass options to natbib, use, e.g.:
+    \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2024
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+% \usepackage[preprint]{neurips_2024}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2024}
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2024}
+\usepackage[final]{neurips_2024}
+\input{package}
+\input{macros}
+\title{Knowledge Circuits in Pretrained Transformers}
+
+\author{
+    \textbf{Yunzhi Yao}$^1$ \quad \textbf{Ningyu Zhang}$^1$\footnotemark[1] \quad \textbf{Zekun Xi}$^1$ \quad \textbf{Mengru Wang}$^1$ \\ \textbf{Ziwen Xu}$^1$ \quad
+    \textbf{Shumin Deng}$^{2}$ \quad \textbf{Huajun Chen}$^{1,3}$\thanks{$\quad$ Corresponding Author.} 
+  \\ 
+  $^1$ Zhejiang University \quad $^2$ National University of Singapore, NUS-NCS Joint Lab, Singapore  \quad \\$^3$ Zhejiang Key Laboratory of Big Data Intelligent Computing\\
+  \texttt{\{yyztodd,zhangningyu\}@zju.edu.cn} \\ 
+  % \texttt{\{yongjiang.jy,chengchen.xpj,f.huang\}@alibaba-inc.com} \\ \texttt{huajunsir@zju.edu.cn}
+}
+
+% \author{%
+%   David S.~Hippocampus\thanks{Use footnote for providing further information
+%     about author (webpage, alternative address)---\emph{not} for acknowledging
+%     funding agencies.} \\
+%   Department of Computer Science\\
+%   Cranberry-Lemon University\\
+%   Pittsburgh, PA 15213 \\
+%   \texttt{hippo@cs.cranberry-lemon.edu} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+% }
+
+%  a 解释现象   b修改行为的尝试
+
+
+ 
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\setcounter{footnote}{0}
+The remarkable capabilities of modern large language models are rooted in their vast repositories of knowledge encoded within their parameters, enabling them to perceive the world and engage in reasoning. The inner workings of how these models store knowledge have long been a subject of intense interest and investigation among researchers. To date, most studies have concentrated on isolated components within these models, such as the Multilayer Perceptrons and attention head. In this paper, we delve into the computation graph of the language model to uncover the knowledge circuits that are instrumental in articulating specific knowledge. The experiments, conducted with GPT2 and TinyLLAMA, have allowed us to observe how certain information heads, relation heads, and Multilayer Perceptrons collaboratively encode knowledge within the model. Moreover, we evaluate the impact of current knowledge editing techniques on these knowledge circuits, providing deeper insights into the functioning and constraints of these editing methodologies. Finally, we utilize knowledge circuits to analyze and interpret language model behaviors such as hallucinations and in-context learning. We believe the knowledge circuits hold potential for advancing our understanding of Transformers and guiding the improved design of knowledge editing\footnote{Code and data are available in \url{https://github.com/zjunlp/KnowledgeCircuits}.}.
+
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+\nl{Knowledge is power, and when embodied in the form of new technical inventions and mechanical discoveries it is the force that drives history.}~\cite{bacon,bacon1949advancement},
+Bacon's words are vividly re-enacted in the era of Large Language Models (LLMs)~\cite{gpt4,DBLP:journals/corr/abs-2303-18223}, as we witness their immense power in reshaping human society and redefining our understanding of machine intelligence. 
+One thing that cannot be denied is that knowledge encapsulated within these models empowers their capabilities in reasoning, perceiving the world, and engaging in human-like communication. 
+Nevertheless, these powerful models are not without their flaws. 
+They still struggle with issues such as hallucinations~\cite{huang2023survey,wang2023survey,DBLP:journals/corr/abs-2402-03190}, unsafe norms \cite{bonaldi2024nlp,DBLP:journals/corr/abs-2401-05561}, and offensive behaviors \cite{DBLP:journals/corr/abs-2309-07045,jiang2024crosslingual} and these problems are exacerbated by the enigmatic internal mechanisms of knowledge storage within language models.
+
+Recently, the research community has devoted significant efforts to unraveling the knowledge storage mechanisms of these models.
+Various studies~\cite{dai-etal-2022-knowledge,geva-etal-2023-dissecting,geva-etal-2022-transformer,geva-etal-2021-transformer,yu2024locating,chughtai2024summing,meng2022locating,merullo2024language} have been conducted to shed light on this intricate process, aiming to enhance our understanding and improve the safety and reliability of language models.
+The main finding in previous work is that knowledge may primarily stored in the Multilayer Perceptrons (MLPs) of Transformer-based language models.
+These MLPs function as a key-value neural memory, with knowledge being stored in what are termed ``knowledge neurons'' (KN).
+Based on these findings, researchers conduct Knowledge Editing~\cite{meng2022locating,yao-etal-2023-editing} to update the language models' inaccurate facts, bias and unsafe content in their parametric space.
+Despite the initial success of these methods, there are still limitations, such as poor generalization, severe side effects, and failure to effectively utilize edited knowledge~\cite{yao-etal-2023-editing,10.1162/tacl_a_00644}, which motivate us to re-think previous approaches for interpreting knowledge storage in language models.
+Note that previous works treat the knowledge blocks as isolated components following the Restorative Theory \cite{hopkins2015restorative}, often focusing on identifying the specific blocks that store particular knowledge.
+Several works \cite{niu2024what,knowledge_editing_survey_2} have proposed that different types of knowledge are often located in the same areas, suggesting that the current KN thesis may be an oversimplification.
+
+To this end, instead of solely pinpointing tiny regions where the knowledge expressed can be localized, we aim to explore the cooperation between different components in Transformers like attention heads, MLPs, and embeddings, to understand how the language model stores and expresses the knowledge. 
+Here, we introduce a new perspective: \textbf{Knowledge Circuits}, a critical subgraph in the language model to view the knowledge mechanism of Transformers.
+Note that Circuit, as a subgraph in the computation graph, has gained ever-growing attention in the mechanistic interpretability field~\cite{elhage2021mathematical}.
+Previous work~\cite{wang2023interpretability,merullo2023circuit} has found several important circuits for specific tasks like Indirect Object Identification and Color Object Identification.
+These tasks necessitate the model to search the preceding context for a matching token and copy it into the next token prediction.
+In this work, we aim to construct knowledge circuits that require the model to utilize stored knowledge for making predictions. 
+Our goal is to better unveil implicit neural knowledge representations, elucidate the internal mechanisms for knowledge editing, and interpret more complex behaviors of language models.
+Specifically, we leverage factual recall tasks and conduct experiments across various domains, including factual, social bias, linguistic, and commonsense knowledge.
+We utilize GPT-2 \cite{radford2019language} and TinyLLAMA \cite{zhang2024tinyllama} to explore the potential knowledge representations and utilization mechanisms in these models.
+As shown in Figure \ref{fig:circuit} (a), we construct knowledge circuits associated with various expressions of knowledge using the existing knowledge stored in the language model. 
+Through those discovered knowledge circuits, we find many interesting phenomena and conclusions as follows:
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figure/circuit.pdf}
+    \caption{Knowledge circuit obtained from \nl{The official language of France is French} in GPT2-Medium. 
+    Left: a simplified circuit and the whole circuit is in Figure~\ref{fig:French_circuit} in Appendix. We use $\dashrightarrow$ to skip some complex connections between nodes. Here, L15H0 means the first attention head in the 15th layer and MLP12 means the multi-perception layer in the 13th layer. Right: the behavior of several special heads. The matrix on the left is the attention pattern of each attention head and the right heapmap demonstrates the output logits of the hean by mapping to the vocabulary space.}
+    \label{fig:circuit}
+\end{figure}
+
+
+%
+
+\textbf{Knowledge circuits unveil implicit neural knowledge representations.}
+We find that even when the knowledge circuits are used independently, the language model can recall related knowledge with a significant portion of its overall performance, demonstrating the effectiveness of those discovered knowledge representations (circuits).
+We also delve into specific pieces of knowledge and analyze the information flow within their respective circuits, indicating that the language model tends to aggregate knowledge in the earlier to middle layers and further enhances this information in the later layers.
+We further uncover several special components (e.g., mover heads and relation heads) in transferring information to the final token position and capturing relational information from the context (Figure \ref{fig:circuit} (b)).
+
+
+\textbf{Knowledge circuits elucidate internal mechanisms for knowledge editing.} 
+We conduct experiments to evaluate the impact of current knowledge editing methods on the language models' original knowledge circuits. 
+Empirically, we observe that ROME \cite{meng2022locating} tends to incorporate edited information primarily at the edited layer. Subsequent mover heads (Appendix \ref{app:definition}) then transport this information to the residual stream of the last token.
+Conversely, during fine-tuning, the edited token is directly integrated into the language model, exerting a dominant influence on subsequent predictions. 
+%These findings could contribute to the development of efficient knowledge editing methods.
+
+
+\textbf{Knowledge circuits facilitate interpreting language model behaviors.} 
+We further utilize the knowledge circuits to interpret language model behaviors, such as \textbf{hallucination} and \textbf{in-context learning}.
+We observe that when hallucination occurs, the language model fails to correctly transfer knowledge to the final token in the earlier layers.
+This is evident as the knowledge circuit lacks an effective ``mover'' head, or the mover head selects incorrect information.
+Additionally, we notice that several new attention heads emerge in the knowledge circuit during in-context learning.
+%These findings from the knowledge circuits provide valuable insights into improving our understanding of the mechanisms of LLMs.
+
+
+
+
+
+%However, knowledge in LMs is intricately entangled and interpolated. 
+
+%Simply locating knowledge based on a single fact or sentence is insufficient to fully grasp the mechanism of LMs. 
+
+%Therefore, to better comprehend LM knowledge, we analyze the intersections between different pieces of knowledge and investigate how the model organizes and integrates these pieces, including reverse facts and multi-hop reasoning.
+
+
+
+
+
+%They also provide a framework for explaining the success and limitations of previous model editing methods, thereby driving advancements in this field.
+
+%We believe that knowledge circuits hold significant potential for enhancing our understanding of the model's knowledge storage mechanisms and warrant further investigation into the behavior of circuit components in the future.
+
+
+
+
+% Unfortunately, the most natural computational unit of the neural network – the neuron itself – turns out not to be a natural unit for human understanding. This is because many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
+
+\input{section/background}
+
+\input{section/construct}
+
+\input{section/Experiment}
+
+\input{section/edit}
+
+\input{section/Utilization}
+
+\section{Related Work}
+
+\textbf{Knowledge Mechanism of Transformers.}
+How the language model stores and utilizes knowledge is an ongoing research topic.
+Previous works find that the MLP in Transformers works as a key-value memory and stores enormous knowledge \cite{dai-etal-2022-knowledge,geva-etal-2021-transformer,geva-etal-2022-transformer,meng2022locating}.
+As to the relation between entities, \citet{hernandez2024linearity} observes that facts can be decoded linearly from the enriched residual stream of the subject by mapping the subject entity to the object entity.
+Instead of viewing the knowledge storage in isolation, \citet{geva-etal-2023-dissecting,lv2024interpreting,yu2024locating} find the knowledge is accumulated during the layers. 
+Regarding knowledge analysis, \citet{bayazit2023discovering} also attempts to discover critical knowledge in language models.
+However, they only consider several layers in the model and use the pruning method, which may overlook the connections between components.
+More related works can be found in Appendix \ref{appendix:More related work}.
+
+% More precisely, \citet{geva-etal-2023-dissecting} describe a circuit for factual recall with three steps: (1) subject enrichment in MLP sublayers, as in ROME, (2) relation propagation to the END token, and (3) selective attribute extraction by later layer attention heads.
+% Besides knowledge, \cite{pmlr-v202-panigrahi23a}
+% This is because the "nodes" are attention heads, and the "edges" are all tangled together in the residual stream.
+
+
+\textbf{Manipulate Language Models.}
+Recently, many works aim to manipulate the language models to make the model aligned with world knowledge or social value norms, such as knowledge editing \cite{yao-etal-2023-editing,knowledge_editing_survey_2}, machine unlearning~\cite{si2023knowledge,chen-yang-2023-unlearn} and detoxification~\cite{DBLP:conf/aaai/HuLHZLZ24,wang2024detoxifying}.
+Most of these works are elicited by previous knowledge mechanism findings such as knowledge neuron \cite{KN}.
+They modify the MLP in the LLM~\cite{meng2022locating,dai-etal-2022-knowledge} to change the model's behavior based on specific factual knowledge.
+However, recent works \cite{li2023inferencetime,sakarvadia-etal-2023-memory} demonstrate the pivotal role of the attention part in knowledge representation.
+% However, these knowledge editing methods suffers from over \cite{niu2024what} 
+\citet{hase2023does} also observe that the performance of editing within a layer may not reliably pinpoint the location of the fact.
+In this paper, we try to manipulate specific knowledge of language models via knowledge circuits, including both MLP and attention components across different layers.
+%Moreover, we assess the application of knowledge circuits and analyze the changes in knowledge circuit after alignment with new knowledge.
+% \citet{li2023inferencetime} add a knowledge specific direction vector at the attention part to improve the factuality of the LM.
+% \citet{sakarvadia-etal-2023-memory} also propose a way to add middle information in the model to improve multi-hop relation.
+% Moreover, our investigation into the effects of knowledge editing methods on knowledge circuits provides a foundational understanding of how to more precisely edit and update the knowledge within these models.
+
+% Bibliography entries for the entire Anthology, followed by custom entries
+\section{Conclusion}
+In this paper, we present a new perspective on knowledge storage based on circuit theory and conduct a preliminary analysis to demonstrate its effectiveness.
+We found that knowledge circuits in the model are not only responsible for expressing knowledge but can also guide behavior in different settings.
+We hope these findings can advance our understanding of the knowledge mechanisms of language models and provide insights for better designing and editing language models, enhancing knowledge, and improving reasoning to enhance factuality and alleviate hallucinations.
+%In the future, we may further explore how these attention heads are formed during pretraining and activated.
+%Language models hold many secrets waiting to be discovered.
+
+% In this paper, we found that several special attention heads are activated by different kinds of knowledge types and some may be reused in some related knowledge. 
+% In the future, we may further explore how these attention heads are formed during pretraining and activated.
+
+\section*{Limitations and Broader Impacts}
+\label{sec: limitation}
+In this work, we employ the causal mediation method to automatically construct circuits tailored to specific knowledge domains.
+However, this circuit discovery-based patching approach is time-intensive. 
+Contemporary research efforts have introduced more efficient methodologies for modeling information flow~\cite{ferrando2024information,syed2023attribution,hanna2024have}. Additionally, alternative techniques for discovering circuits through mask training~\cite{bhaskar2024finding,yu2024functional} and Sparse Auto-Encoders~\cite{bricken2023monosemanticity,he2024dictionary} have been proposed, highlighting diverse facets of circuit behavior within large language models (LLMs).
+We posit that the field of knowledge circuit discovery holds significant potential for advancement. 
+Furthermore, recent studies~\cite{zou2024improving} have developed `circuit breakers' to manage representations associated with potentially harmful outputs. 
+We hope that our approach can contribute to ensuring the safety and privacy of information, thereby fostering the development of trustworthy AI.
+%By concentrating on linguistic, factual, commonsense, and bias-related knowledge, we assert that our methodology can contribute to ensuring the safety and privacy of information, thereby fostering the development of trustworthy AI.
+
+% This could help us build a more and controlled AI model.
+
+\section*{Acknowledgments}
+
+%We would like to express gratitude to the anonymous reviewers for their kind comments. 
+This work was supported by the National Natural Science Foundation of China (No. 62206246, No. NSFCU23B2055, No. NSFCU19B2027), the Fundamental Research Funds for the Central Universities (226-2023-00138), Zhejiang Provincial Natural Science Foundation of China (No. LGG22F030011), Yongjiang Talent Introduction Programme (2021A-156-G), CIPSC-SMP-Zhipu Large Model Cross-Disciplinary Fund, Ningbo Science and Technology Special Projects under Grant No. 2023Z212, Information Technology Center and State Key Lab of CAD\&CG, Zhejiang University, NUS-NCS Joint Laboratory (A-0008542-00-00), and the Ministry of Education, Singapore, under the Academic Research Fund Tier 1 (FY2023) (Grant A-8001996-00-00).
+We gratefully acknowledge the support of Zhejiang University Education Foundation Qizhen Scholar Foundation.
+
+
+
+\bibliography{references}
+\bibliographystyle{unsrtnat}
+% Custom bibliography entries only
+% \bibliography{custom}
+\newpage
+
+\input{section/appendix}
+\clearpage
+%\input{section/checklist}
+
+
+\end{document}

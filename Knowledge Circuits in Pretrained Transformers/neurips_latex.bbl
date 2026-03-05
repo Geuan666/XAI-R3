@@ -1,0 +1,498 @@
+\begin{thebibliography}{90}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[bac()]{bacon}
+Francis bacon.
+\newblock \url{https://iep.utm.edu/francis-bacon/}.
+
+\bibitem[Bacon(1949)]{bacon1949advancement}
+Francis Bacon.
+\newblock The advancement of learning [1605].
+\newblock In \emph{Primer of intellectual freedom}, pages 172--192. Harvard University Press, 1949.
+
+\bibitem[OpenAI and the Co-authors(2024)]{gpt4}
+OpenAI and the Co-authors.
+\newblock Gpt-4 technical report, 2024.
+
+\bibitem[Zhao et~al.(2023)Zhao, Zhou, Li, Tang, Wang, Hou, Min, Zhang, Zhang, Dong, Du, Yang, Chen, Chen, Jiang, Ren, Li, Tang, Liu, Liu, Nie, and Wen]{DBLP:journals/corr/abs-2303-18223}
+Wayne~Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian Min, Beichen Zhang, Junjie Zhang, Zican Dong, Yifan Du, Chen Yang, Yushuo Chen, Zhipeng Chen, Jinhao Jiang, Ruiyang Ren, Yifan Li, Xinyu Tang, Zikang Liu, Peiyu Liu, Jian{-}Yun Nie, and Ji{-}Rong Wen.
+\newblock A survey of large language models.
+\newblock \emph{CoRR}, abs/2303.18223, 2023.
+\newblock \doi{10.48550/ARXIV.2303.18223}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2303.18223}.
+
+\bibitem[Huang et~al.(2023)Huang, Yu, Ma, Zhong, Feng, Wang, Chen, Peng, Feng, Qin, and Liu]{huang2023survey}
+Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong, Zhangyin Feng, Haotian Wang, Qianglong Chen, Weihua Peng, Xiaocheng Feng, Bing Qin, and Ting Liu.
+\newblock A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions, 2023.
+
+\bibitem[Wang et~al.(2023{\natexlab{a}})Wang, Liu, Yue, Tang, Zhang, Jiayang, Yao, Gao, Hu, Qi, Wang, Yang, Wang, Xie, Zhang, and Zhang]{wang2023survey}
+Cunxiang Wang, Xiaoze Liu, Yuanhao Yue, Xiangru Tang, Tianhang Zhang, Cheng Jiayang, Yunzhi Yao, Wenyang Gao, Xuming Hu, Zehan Qi, Yidong Wang, Linyi Yang, Jindong Wang, Xing Xie, Zheng Zhang, and Yue Zhang.
+\newblock Survey on factuality in large language models: Knowledge, retrieval and domain-specificity, 2023{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2024{\natexlab{a}})Chen, Wang, Xue, Zhang, Yang, Li, Shen, Liang, Gu, and Chen]{DBLP:journals/corr/abs-2402-03190}
+Xiang Chen, Chenxi Wang, Yida Xue, Ningyu Zhang, Xiaoyan Yang, Qiang Li, Yue Shen, Lei Liang, Jinjie Gu, and Huajun Chen.
+\newblock Unified hallucination detection for multimodal large language models.
+\newblock \emph{CoRR}, abs/2402.03190, 2024{\natexlab{a}}.
+\newblock \doi{10.48550/ARXIV.2402.03190}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2402.03190}.
+
+\bibitem[Bonaldi et~al.(2024)Bonaldi, Chung, Abercrombie, and Guerini]{bonaldi2024nlp}
+Helena Bonaldi, Yi-Ling Chung, Gavin Abercrombie, and Marco Guerini.
+\newblock Nlp for counterspeech against hate: A survey and how-to guide, 2024.
+
+\bibitem[Sun et~al.(2024)Sun, Huang, Wang, Wu, Zhang, Gao, Huang, Lyu, Zhang, Li, Liu, Liu, Wang, Zhang, Kailkhura, Xiong, Xiao, Li, Xing, Huang, Liu, Ji, Wang, Zhang, Yao, Kellis, Zitnik, Jiang, Bansal, Zou, Pei, Liu, Gao, Han, Zhao, Tang, Wang, Mitchell, Shu, Xu, Chang, He, Huang, Backes, Gong, Yu, Chen, Gu, Xu, Ying, Ji, Jana, Chen, Liu, Zhou, Wang, Li, Zhang, Wang, Xie, Chen, Wang, Liu, Ye, Cao, and Zhao]{DBLP:journals/corr/abs-2401-05561}
+Lichao Sun, Yue Huang, Haoran Wang, Siyuan Wu, Qihui Zhang, Chujie Gao, Yixin Huang, Wenhan Lyu, Yixuan Zhang, Xiner Li, Zhengliang Liu, Yixin Liu, Yijue Wang, Zhikun Zhang, Bhavya Kailkhura, Caiming Xiong, Chaowei Xiao, Chunyuan Li, Eric~P. Xing, Furong Huang, Hao Liu, Heng Ji, Hongyi Wang, Huan Zhang, Huaxiu Yao, Manolis Kellis, Marinka Zitnik, Meng Jiang, Mohit Bansal, James Zou, Jian Pei, Jian Liu, Jianfeng Gao, Jiawei Han, Jieyu Zhao, Jiliang Tang, Jindong Wang, John Mitchell, Kai Shu, Kaidi Xu, Kai{-}Wei Chang, Lifang He, Lifu Huang, Michael Backes, Neil~Zhenqiang Gong, Philip~S. Yu, Pin{-}Yu Chen, Quanquan Gu, Ran Xu, Rex Ying, Shuiwang Ji, Suman Jana, Tianlong Chen, Tianming Liu, Tianyi Zhou, William Wang, Xiang Li, Xiangliang Zhang, Xiao Wang, Xing Xie, Xun Chen, Xuyu Wang, Yan Liu, Yanfang Ye, Yinzhi Cao, and Yue Zhao.
+\newblock Trustllm: Trustworthiness in large language models.
+\newblock \emph{CoRR}, abs/2401.05561, 2024.
+\newblock \doi{10.48550/ARXIV.2401.05561}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2401.05561}.
+
+\bibitem[Zhang et~al.(2023)Zhang, Lei, Wu, Sun, Huang, Long, Liu, Lei, Tang, and Huang]{DBLP:journals/corr/abs-2309-07045}
+Zhexin Zhang, Leqi Lei, Lindong Wu, Rui Sun, Yongkang Huang, Chong Long, Xiao Liu, Xuanyu Lei, Jie Tang, and Minlie Huang.
+\newblock Safetybench: Evaluating the safety of large language models with multiple choice questions.
+\newblock \emph{CoRR}, abs/2309.07045, 2023.
+\newblock \doi{10.48550/ARXIV.2309.07045}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2309.07045}.
+
+\bibitem[Jiang and Zubiaga(2024)]{jiang2024crosslingual}
+Aiqi Jiang and Arkaitz Zubiaga.
+\newblock Cross-lingual offensive language detection: A systematic review of datasets, transfer approaches and challenges, 2024.
+
+\bibitem[Dai et~al.(2022{\natexlab{a}})Dai, Dong, Hao, Sui, Chang, and Wei]{dai-etal-2022-knowledge}
+Damai Dai, Li~Dong, Yaru Hao, Zhifang Sui, Baobao Chang, and Furu Wei.
+\newblock Knowledge neurons in pretrained transformers.
+\newblock In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, editors, \emph{Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 8493--8502, Dublin, Ireland, May 2022{\natexlab{a}}. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2022.acl-long.581}.
+
+\bibitem[Geva et~al.(2023)Geva, Bastings, Filippova, and Globerson]{geva-etal-2023-dissecting}
+Mor Geva, Jasmijn Bastings, Katja Filippova, and Amir Globerson.
+\newblock Dissecting recall of factual associations in auto-regressive language models.
+\newblock In Houda Bouamor, Juan Pino, and Kalika Bali, editors, \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 12216--12235, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.emnlp-main.751}.
+
+\bibitem[Geva et~al.(2022{\natexlab{a}})Geva, Caciularu, Wang, and Goldberg]{geva-etal-2022-transformer}
+Mor Geva, Avi Caciularu, Kevin Wang, and Yoav Goldberg.
+\newblock Transformer feed-forward layers build predictions by promoting concepts in the vocabulary space.
+\newblock In Yoav Goldberg, Zornitsa Kozareva, and Yue Zhang, editors, \emph{Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing}, pages 30--45, Abu Dhabi, United Arab Emirates, December 2022{\natexlab{a}}. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2022.emnlp-main.3}.
+
+\bibitem[Geva et~al.(2021{\natexlab{a}})Geva, Schuster, Berant, and Levy]{geva-etal-2021-transformer}
+Mor Geva, Roei Schuster, Jonathan Berant, and Omer Levy.
+\newblock Transformer feed-forward layers are key-value memories.
+\newblock In Marie-Francine Moens, Xuanjing Huang, Lucia Specia, and Scott Wen-tau Yih, editors, \emph{Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing}, pages 5484--5495, Online and Punta Cana, Dominican Republic, November 2021{\natexlab{a}}. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2021.emnlp-main.446}.
+
+\bibitem[Yu and Ananiadou(2024)]{yu2024locating}
+Zeping Yu and Sophia Ananiadou.
+\newblock Locating factual knowledge in large language models: Exploring the residual stream and analyzing subvalues in vocabulary space, 2024.
+
+\bibitem[Chughtai et~al.(2024)Chughtai, Cooney, and Nanda]{chughtai2024summing}
+Bilal Chughtai, Alan Cooney, and Neel Nanda.
+\newblock Summing up the facts: Additive mechanisms behind factual recall in llms, 2024.
+
+\bibitem[Meng et~al.(2022)Meng, Bau, Andonian, and Belinkov]{meng2022locating}
+Kevin Meng, David Bau, Alex Andonian, and Yonatan Belinkov.
+\newblock Locating and editing factual associations in {GPT}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2022.
+
+\bibitem[Merullo et~al.(2024{\natexlab{a}})Merullo, Eickhoff, and Pavlick]{merullo2024language}
+Jack Merullo, Carsten Eickhoff, and Ellie Pavlick.
+\newblock Language models implement simple word2vec-style vector arithmetic, 2024{\natexlab{a}}.
+
+\bibitem[Yao et~al.(2023)Yao, Wang, Tian, Cheng, Li, Deng, Chen, and Zhang]{yao-etal-2023-editing}
+Yunzhi Yao, Peng Wang, Bozhong Tian, Siyuan Cheng, Zhoubo Li, Shumin Deng, Huajun Chen, and Ningyu Zhang.
+\newblock Editing large language models: Problems, methods, and opportunities.
+\newblock In Houda Bouamor, Juan Pino, and Kalika Bali, editors, \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 10222--10240, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.emnlp-main.632}.
+
+\bibitem[Cohen et~al.(2024)Cohen, Biran, Yoran, Globerson, and Geva]{10.1162/tacl_a_00644}
+Roi Cohen, Eden Biran, Ori Yoran, Amir Globerson, and Mor Geva.
+\newblock {Evaluating the Ripple Effects of Knowledge Editing in Language Models}.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 12:\penalty0 283--298, 04 2024.
+\newblock ISSN 2307-387X.
+\newblock \doi{10.1162/tacl_a_00644}.
+\newblock URL \url{https://doi.org/10.1162/tacl\_a\_00644}.
+
+\bibitem[Hopkins(2015)]{hopkins2015restorative}
+Belinda Hopkins.
+\newblock \emph{Restorative theory in practice: Insights into what works and why}.
+\newblock Jessica Kingsley Publishers, 2015.
+
+\bibitem[Niu et~al.(2024)Niu, Liu, Zhu, and Penn]{niu2024what}
+Jingcheng Niu, Andrew Liu, Zining Zhu, and Gerald Penn.
+\newblock What does the knowledge neuron thesis have to do with knowledge?
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=2HJRwwbV3G}.
+
+\bibitem[Zhang et~al.(2024{\natexlab{a}})Zhang, Yao, Tian, Wang, Deng, Wang, Xi, Mao, Zhang, Ni, et~al.]{knowledge_editing_survey_2}
+Ningyu Zhang, Yunzhi Yao, Bozhong Tian, Peng Wang, Shumin Deng, Mengru Wang, Zekun Xi, Shengyu Mao, Jintian Zhang, Yuansheng Ni, et~al.
+\newblock A comprehensive study of knowledge editing for large language models.
+\newblock \emph{arXiv preprint arXiv:2401.01286}, 2024{\natexlab{a}}.
+
+\bibitem[Elhage et~al.(2021)Elhage, Nanda, Olsson, Henighan, Joseph, Mann, Askell, Bai, Chen, Conerly, DasSarma, Drain, Ganguli, Hatfield-Dodds, Hernandez, Jones, Kernion, Lovitt, Ndousse, Amodei, Brown, Clark, Kaplan, McCandlish, and Olah]{elhage2021mathematical}
+Nelson Elhage, Neel Nanda, Catherine Olsson, Tom Henighan, Nicholas Joseph, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, Nova DasSarma, Dawn Drain, Deep Ganguli, Zac Hatfield-Dodds, Danny Hernandez, Andy Jones, Jackson Kernion, Liane Lovitt, Kamal Ndousse, Dario Amodei, Tom Brown, Jack Clark, Jared Kaplan, Sam McCandlish, and Chris Olah.
+\newblock A mathematical framework for transformer circuits.
+\newblock \emph{Transformer Circuits Thread}, 2021.
+\newblock https://transformer-circuits.pub/2021/framework/index.html.
+
+\bibitem[Wang et~al.(2023{\natexlab{b}})Wang, Variengien, Conmy, Shlegeris, and Steinhardt]{wang2023interpretability}
+Kevin~Ro Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris, and Jacob Steinhardt.
+\newblock Interpretability in the wild: a circuit for indirect object identification in {GPT}-2 small.
+\newblock In \emph{The Eleventh International Conference on Learning Representations}, 2023{\natexlab{b}}.
+\newblock URL \url{https://openreview.net/forum?id=NpsVSN6o4ul}.
+
+\bibitem[Merullo et~al.(2024{\natexlab{b}})Merullo, Eickhoff, and Pavlick]{merullo2023circuit}
+Jack Merullo, Carsten Eickhoff, and Ellie Pavlick.
+\newblock Circuit component reuse across tasks in transformer language models.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024{\natexlab{b}}.
+\newblock URL \url{https://openreview.net/forum?id=fpoAYV6Wsk}.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever, et~al.]{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et~al.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Zhang et~al.(2024{\natexlab{b}})Zhang, Zeng, Wang, and Lu]{zhang2024tinyllama}
+Peiyuan Zhang, Guangtao Zeng, Tianduo Wang, and Wei Lu.
+\newblock Tinyllama: An open-source small language model, 2024{\natexlab{b}}.
+
+\bibitem[Olah et~al.(2020)Olah, Cammarata, Schubert, Goh, Petrov, and Carter]{olah2020zoom}
+Chris Olah, Nick Cammarata, Ludwig Schubert, Gabriel Goh, Michael Petrov, and Shan Carter.
+\newblock Zoom in: An introduction to circuits.
+\newblock \emph{Distill}, 2020.
+\newblock \doi{10.23915/distill.00024.001}.
+\newblock https://distill.pub/2020/circuits/zoom-in.
+
+\bibitem[Lv et~al.(2024)Lv, Zhang, Chen, Wang, Liu, Wen, Xie, and Yan]{lv2024interpreting}
+Ang Lv, Kaiyi Zhang, Yuhan Chen, Yulong Wang, Lifeng Liu, Ji-Rong Wen, Jian Xie, and Rui Yan.
+\newblock Interpreting key mechanisms of factual recall in transformer-based language models, 2024.
+
+\bibitem[Conmy et~al.(2023)Conmy, Mavor-Parker, Lynch, Heimersheim, and Garriga-Alonso]{acdc}
+Arthur Conmy, Augustine Mavor-Parker, Aengus Lynch, Stefan Heimersheim, and Adri\`{a} Garriga-Alonso.
+\newblock Towards automated circuit discovery for mechanistic interpretability.
+\newblock In A.~Oh, T.~Neumann, A.~Globerson, K.~Saenko, M.~Hardt, and S.~Levine, editors, \emph{Advances in Neural Information Processing Systems}, volume~36, pages 16318--16352. Curran Associates, Inc., 2023.
+\newblock URL \url{https://proceedings.neurips.cc/paper_files/paper/2023/file/34e1dbe95d34d7ebaf99b9bcaeb5b2be-Paper-Conference.pdf}.
+
+\bibitem[Bereska and Gavves(2024)]{bereska2024mechanistic}
+Leonard Bereska and Efstratios Gavves.
+\newblock Mechanistic interpretability for ai safety -- a review, 2024.
+
+\bibitem[Pearl(2022)]{pearl2022direct}
+Judea Pearl.
+\newblock Direct and indirect effects.
+\newblock In \emph{Probabilistic and causal inference: the works of Judea Pearl}, pages 373--392. 2022.
+
+\bibitem[Vig et~al.(2020)Vig, Gehrmann, Belinkov, Qian, Nevo, Singer, and Shieber]{vig2020investigating}
+Jesse Vig, Sebastian Gehrmann, Yonatan Belinkov, Sharon Qian, Daniel Nevo, Yaron Singer, and Stuart Shieber.
+\newblock Investigating gender bias in language models using causal mediation analysis.
+\newblock \emph{Advances in neural information processing systems}, 33:\penalty0 12388--12401, 2020.
+
+\bibitem[He et~al.(2024)He, Ge, Tang, Sun, Cheng, and Qiu]{he2024dictionary}
+Zhengfu He, Xuyang Ge, Qiong Tang, Tianxiang Sun, Qinyuan Cheng, and Xipeng Qiu.
+\newblock Dictionary learning improves patch-free circuit discovery in mechanistic interpretability: A case study on othello-gpt, 2024.
+
+\bibitem[Cunningham et~al.(2023)Cunningham, Ewart, Riggs, Huben, and Sharkey]{cunningham2023sparse}
+Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, and Lee Sharkey.
+\newblock Sparse autoencoders find highly interpretable features in language models.
+\newblock \emph{arXiv preprint arXiv:2309.08600}, 2023.
+
+\bibitem[Goldowsky-Dill et~al.(2023)Goldowsky-Dill, MacLeod, Sato, and Arora]{goldowsky2023localizing}
+Nicholas Goldowsky-Dill, Chris MacLeod, Lucas Sato, and Aryaman Arora.
+\newblock Localizing model behavior with path patching, 2023.
+
+\bibitem[Katz and Belinkov(2023)]{katz-belinkov-2023-visit}
+Shahar Katz and Yonatan Belinkov.
+\newblock {VISIT}: Visualizing and interpreting the semantic information flow of transformers.
+\newblock In Houda Bouamor, Juan Pino, and Kalika Bali, editors, \emph{Findings of the Association for Computational Linguistics: EMNLP 2023}, pages 14094--14113, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.findings-emnlp.939}.
+\newblock URL \url{https://aclanthology.org/2023.findings-emnlp.939}.
+
+\bibitem[nostalgebraist(2020{\natexlab{a}})]{nostalgebraist_interpreting_nodate}
+nostalgebraist.
+\newblock interpreting {GPT}: the logit lens.
+\newblock 2020{\natexlab{a}}.
+\newblock URL \url{https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens}.
+
+\bibitem[Nanda and Bloom(2022)]{nanda2022transformerlens}
+Neel Nanda and Joseph Bloom.
+\newblock Transformerlens.
+\newblock \url{https://github.com/neelnanda-io/TransformerLens}, 2022.
+
+\bibitem[Hernandez et~al.(2024)Hernandez, Sharma, Haklay, Meng, Wattenberg, Andreas, Belinkov, and Bau]{hernandez2024linearity}
+Evan Hernandez, Arnab~Sen Sharma, Tal Haklay, Kevin Meng, Martin Wattenberg, Jacob Andreas, Yonatan Belinkov, and David Bau.
+\newblock Linearity of relation decoding in transformer language models.
+\newblock In \emph{Proceedings of the 2024 International Conference on Learning Representations}, 2024.
+
+\bibitem[Ferrando et~al.(2024)Ferrando, Sarti, Bisazza, and Costa-jussà]{ferrando2024primer}
+Javier Ferrando, Gabriele Sarti, Arianna Bisazza, and Marta~R. Costa-jussà.
+\newblock A primer on the inner workings of transformer-based language models, 2024.
+
+\bibitem[Allen-Zhu and Li(2024)]{knowledge_capacity}
+Zeyuan Allen-Zhu and Yuanzhi Li.
+\newblock Physics of language models: Part 3.3, knowledge capacity scaling laws.
+\newblock 2024.
+
+\bibitem[Hase et~al.(2023)Hase, Bansal, Kim, and Ghandeharioun]{hase2023does}
+Peter Hase, Mohit Bansal, Been Kim, and Asma Ghandeharioun.
+\newblock Does localization inform editing? surprising differences in causality-based localization vs. knowledge editing in language models.
+\newblock In \emph{Thirty-seventh Conference on Neural Information Processing Systems}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=EldbUlZtbd}.
+
+\bibitem[Zhong et~al.(2023)Zhong, Wu, Manning, Potts, and Chen]{zhong-etal-2023-mquake}
+Zexuan Zhong, Zhengxuan Wu, Christopher Manning, Christopher Potts, and Danqi Chen.
+\newblock {MQ}u{AKE}: Assessing knowledge editing in language models via multi-hop questions.
+\newblock In Houda Bouamor, Juan Pino, and Kalika Bali, editors, \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 15686--15702, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.emnlp-main.971}.
+
+\bibitem[Yang et~al.(2024)Yang, Gribovskaya, Kassner, Geva, and Riedel]{yang2024large}
+Sohee Yang, Elena Gribovskaya, Nora Kassner, Mor Geva, and Sebastian Riedel.
+\newblock Do large language models latently perform multi-hop reasoning?, 2024.
+
+\bibitem[Ju et~al.(2024)Ju, Chen, Yuan, Zhang, Du, Zheng, and Liu]{ju2024investigating}
+Tianjie Ju, Yijin Chen, Xinwei Yuan, Zhuosheng Zhang, Wei Du, Yubin Zheng, and Gongshen Liu.
+\newblock Investigating multi-hop factual shortcuts in knowledge editing of large language models, 2024.
+
+\bibitem[Gao et~al.(2023)Gao, Xiong, Gao, Jia, Pan, Bi, Dai, Sun, Guo, Wang, and Wang]{DBLP:journals/corr/abs-2312-10997}
+Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yi~Dai, Jiawei Sun, Qianyu Guo, Meng Wang, and Haofen Wang.
+\newblock Retrieval-augmented generation for large language models: {A} survey.
+\newblock \emph{CoRR}, abs/2312.10997, 2023.
+\newblock \doi{10.48550/ARXIV.2312.10997}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2312.10997}.
+
+\bibitem[Olsson et~al.(2022)Olsson, Elhage, Nanda, Joseph, DasSarma, Henighan, Mann, Askell, Bai, Chen, Conerly, Drain, Ganguli, Hatfield-Dodds, Hernandez, Johnston, Jones, Kernion, Lovitt, Ndousse, Amodei, Brown, Clark, Kaplan, McCandlish, and Olah]{olsson2022context}
+Catherine Olsson, Nelson Elhage, Neel Nanda, Nicholas Joseph, Nova DasSarma, Tom Henighan, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, Dawn Drain, Deep Ganguli, Zac Hatfield-Dodds, Danny Hernandez, Scott Johnston, Andy Jones, Jackson Kernion, Liane Lovitt, Kamal Ndousse, Dario Amodei, Tom Brown, Jack Clark, Jared Kaplan, Sam McCandlish, and Chris Olah.
+\newblock In-context learning and induction heads.
+\newblock \emph{Transformer Circuits Thread}, 2022.
+\newblock https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html.
+
+\bibitem[Todd et~al.(2024)Todd, Li, Sharma, Mueller, Wallace, and Bau]{todd2024llms}
+Eric Todd, Millicent Li, Arnab~Sen Sharma, Aaron Mueller, Byron~C Wallace, and David Bau.
+\newblock {LLM}s represent contextual tasks as compact function vectors.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=AwyxtyMwaG}.
+
+\bibitem[Bayazit et~al.(2023)Bayazit, Foroutan, Chen, Weiss, and Bosselut]{bayazit2023discovering}
+Deniz Bayazit, Negar Foroutan, Zeming Chen, Gail Weiss, and Antoine Bosselut.
+\newblock Discovering knowledge-critical subnetworks in pretrained language models, 2023.
+
+\bibitem[Si et~al.(2023)Si, Zhang, Chang, Zhang, Qu, and Zhang]{si2023knowledge}
+Nianwen Si, Hao Zhang, Heyu Chang, Wenlin Zhang, Dan Qu, and Weiqiang Zhang.
+\newblock Knowledge unlearning for llms: Tasks, methods, and challenges, 2023.
+
+\bibitem[Chen and Yang(2023)]{chen-yang-2023-unlearn}
+Jiaao Chen and Diyi Yang.
+\newblock Unlearn what you want to forget: Efficient unlearning for {LLM}s.
+\newblock In Houda Bouamor, Juan Pino, and Kalika Bali, editors, \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 12041--12052, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.emnlp-main.738}.
+\newblock URL \url{https://aclanthology.org/2023.emnlp-main.738}.
+
+\bibitem[Hu et~al.(2024)Hu, Li, Hu, Zheng, Liu, and Zhang]{DBLP:conf/aaai/HuLHZLZ24}
+Xinshuo Hu, Dongfang Li, Baotian Hu, Zihao Zheng, Zhenyu Liu, and Min Zhang.
+\newblock Separate the wheat from the chaff: Model deficiency unlearning via parameter-efficient module operation.
+\newblock In Michael~J. Wooldridge, Jennifer~G. Dy, and Sriraam Natarajan, editors, \emph{Thirty-Eighth {AAAI} Conference on Artificial Intelligence, {AAAI} 2024, Thirty-Sixth Conference on Innovative Applications of Artificial Intelligence, {IAAI} 2024, Fourteenth Symposium on Educational Advances in Artificial Intelligence, {EAAI} 2014, February 20-27, 2024, Vancouver, Canada}, pages 18252--18260. {AAAI} Press, 2024.
+\newblock \doi{10.1609/AAAI.V38I16.29784}.
+\newblock URL \url{https://doi.org/10.1609/aaai.v38i16.29784}.
+
+\bibitem[Wang et~al.(2024)Wang, Zhang, Xu, Xi, Deng, Yao, Zhang, Yang, Wang, and Chen]{wang2024detoxifying}
+Mengru Wang, Ningyu Zhang, Ziwen Xu, Zekun Xi, Shumin Deng, Yunzhi Yao, Qishen Zhang, Linyi Yang, Jindong Wang, and Huajun Chen.
+\newblock Detoxifying large language models via knowledge editing, 2024.
+
+\bibitem[Dai et~al.(2022{\natexlab{b}})Dai, Dong, Hao, Sui, Chang, and Wei]{KN}
+Damai Dai, Li~Dong, Yaru Hao, Zhifang Sui, Baobao Chang, and Furu Wei.
+\newblock Knowledge neurons in pretrained transformers.
+\newblock In \emph{Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), {ACL} 2022, Dublin, Ireland, May 22-27, 2022}, pages 8493--8502. Association for Computational Linguistics, 2022{\natexlab{b}}.
+
+\bibitem[Li et~al.(2023{\natexlab{a}})Li, Patel, Vi{\'e}gas, Pfister, and Wattenberg]{li2023inferencetime}
+Kenneth Li, Oam Patel, Fernanda Vi{\'e}gas, Hanspeter Pfister, and Martin Wattenberg.
+\newblock Inference-time intervention: Eliciting truthful answers from a language model.
+\newblock In \emph{Thirty-seventh Conference on Neural Information Processing Systems}, 2023{\natexlab{a}}.
+\newblock URL \url{https://openreview.net/forum?id=aLLuYpn83y}.
+
+\bibitem[Sakarvadia et~al.(2023)Sakarvadia, Ajith, Khan, Grzenda, Hudson, Bauer, Chard, and Foster]{sakarvadia-etal-2023-memory}
+Mansi Sakarvadia, Aswathy Ajith, Arham Khan, Daniel Grzenda, Nathaniel Hudson, Andr{\'e} Bauer, Kyle Chard, and Ian Foster.
+\newblock Memory injections: Correcting multi-hop reasoning failures during inference in transformer-based language models.
+\newblock In Yonatan Belinkov, Sophie Hao, Jaap Jumelet, Najoung Kim, Arya McCarthy, and Hosein Mohebbi, editors, \emph{Proceedings of the 6th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP}, pages 342--356, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.blackboxnlp-1.26}.
+
+\bibitem[Ferrando and Voita(2024)]{ferrando2024information}
+Javier Ferrando and Elena Voita.
+\newblock Information flow routes: Automatically interpreting language models at scale.
+\newblock \emph{arXiv preprint arXiv:2403.00824}, 2024.
+
+\bibitem[Syed et~al.(2023)Syed, Rager, and Conmy]{syed2023attribution}
+Aaquib Syed, Can Rager, and Arthur Conmy.
+\newblock Attribution patching outperforms automated circuit discovery.
+\newblock In \emph{NeurIPS Workshop on Attributing Model Behavior at Scale}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=tiLbFR4bJW}.
+
+\bibitem[Hanna et~al.(2024)Hanna, Pezzelle, and Belinkov]{hanna2024have}
+Michael Hanna, Sandro Pezzelle, and Yonatan Belinkov.
+\newblock Have faith in faithfulness: Going beyond circuit overlap when finding model mechanisms.
+\newblock In \emph{First Conference on Language Modeling}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=TZ0CCGDcuT}.
+
+\bibitem[Bhaskar et~al.(2024)Bhaskar, Wettig, Friedman, and Chen]{bhaskar2024finding}
+Adithya Bhaskar, Alexander Wettig, Dan Friedman, and Danqi Chen.
+\newblock Finding transformer circuits with edge pruning.
+\newblock \emph{arXiv preprint arXiv:2406.16778}, 2024.
+
+\bibitem[Yu et~al.(2024)Yu, Niu, Zhu, and Penn]{yu2024functional}
+Lei Yu, Jingcheng Niu, Zining Zhu, and Gerald Penn.
+\newblock Functional faithfulness in the wild: Circuit discovery with differentiable computation graph pruning.
+\newblock \emph{arXiv preprint arXiv:2407.03779}, 2024.
+
+\bibitem[Bricken et~al.(2023)Bricken, Templeton, Batson, Chen, Jermyn, Conerly, Turner, Anil, Denison, Askell, Lasenby, Wu, Kravec, Schiefer, Maxwell, Joseph, Hatfield-Dodds, Tamkin, Nguyen, McLean, Burke, Hume, Carter, Henighan, and Olah]{bricken2023monosemanticity}
+Trenton Bricken, Adly Templeton, Joshua Batson, Brian Chen, Adam Jermyn, Tom Conerly, Nick Turner, Cem Anil, Carson Denison, Amanda Askell, Robert Lasenby, Yifan Wu, Shauna Kravec, Nicholas Schiefer, Tim Maxwell, Nicholas Joseph, Zac Hatfield-Dodds, Alex Tamkin, Karina Nguyen, Brayden McLean, Josiah~E Burke, Tristan Hume, Shan Carter, Tom Henighan, and Christopher Olah.
+\newblock Towards monosemanticity: Decomposing language models with dictionary learning.
+\newblock \emph{Transformer Circuits Thread}, 2023.
+\newblock https://transformer-circuits.pub/2023/monosemantic-features/index.html.
+
+\bibitem[Zou et~al.(2024)Zou, Phan, Wang, Duenas, Lin, Andriushchenko, Wang, Kolter, Fredrikson, and Hendrycks]{zou2024improving}
+Andy Zou, Long Phan, Justin Wang, Derek Duenas, Maxwell Lin, Maksym Andriushchenko, Rowan Wang, Zico Kolter, Matt Fredrikson, and Dan Hendrycks.
+\newblock Improving alignment and robustness with short circuiting.
+\newblock \emph{arXiv preprint arXiv:2406.04313}, 2024.
+
+\bibitem[Ainslie et~al.(2023)Ainslie, Lee-Thorp, de~Jong, Zemlyanskiy, Lebron, and Sanghai]{ainslie-etal-2023-gqa}
+Joshua Ainslie, James Lee-Thorp, Michiel de~Jong, Yury Zemlyanskiy, Federico Lebron, and Sumit Sanghai.
+\newblock {GQA}: Training generalized multi-query transformer models from multi-head checkpoints.
+\newblock In Houda Bouamor, Juan Pino, and Kalika Bali, editors, \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 4895--4901, Singapore, December 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.emnlp-main.298}.
+\newblock URL \url{https://aclanthology.org/2023.emnlp-main.298}.
+
+\bibitem[Chen et~al.(2024{\natexlab{b}})Chen, Xiong, Liu, Wu, Xiao, Gao, and He]{chen2024incontext}
+Shiqi Chen, Miao Xiong, Junteng Liu, Zhengxuan Wu, Teng Xiao, Siyang Gao, and Junxian He.
+\newblock In-context sharpness as alerts: An inner representation perspective for hallucination mitigation, 2024{\natexlab{b}}.
+
+\bibitem[Chuang et~al.(2024)Chuang, Xie, Luo, Kim, Glass, and He]{chuang2024dola}
+Yung-Sung Chuang, Yujia Xie, Hongyin Luo, Yoon Kim, James~R. Glass, and Pengcheng He.
+\newblock Dola: Decoding by contrasting layers improves factuality in large language models.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=Th6NyL07na}.
+
+\bibitem[Elhoushi et~al.(2024)Elhoushi, Shrivastava, Liskovich, Hosmer, Wasti, Lai, Mahmoud, Acun, Agarwal, Roman, et~al.]{elhoushi2024layer}
+Mostafa Elhoushi, Akshat Shrivastava, Diana Liskovich, Basil Hosmer, Bram Wasti, Liangzhen Lai, Anas Mahmoud, Bilge Acun, Saurabh Agarwal, Ahmed Roman, et~al.
+\newblock Layer skip: Enabling early exit inference and self-speculative decoding.
+\newblock \emph{arXiv preprint arXiv:2404.16710}, 2024.
+
+\bibitem[Beren and Black(2022)]{svd2022}
+Beren and Sid Black.
+\newblock The singular value decompositions of transformer weight matrices are highly interpretable.
+\newblock \url{https://www.lesswrong.com/posts/mkbGjzxD8d8XqKHzA/the-singular-value-decompositions-of-transformer-weight}, 2022.
+
+\bibitem[Zhang(2023)]{junlin2023}
+Junlin Zhang.
+\newblock Parametric reflection of the world: Why can gpt generate intelligence through next token prediction.
+\newblock \url{https://zhuanlan.zhihu.com/p/632795115}, 2023.
+
+\bibitem[Berglund et~al.(2024)Berglund, Tong, Kaufmann, Balesni, Stickland, Korbak, and Evans]{berglund2024the}
+Lukas Berglund, Meg Tong, Maximilian Kaufmann, Mikita Balesni, Asa~Cooper Stickland, Tomasz Korbak, and Owain Evans.
+\newblock The reversal curse: {LLM}s trained on {\textquotedblleft}a is b{\textquotedblright} fail to learn {\textquotedblleft}b is a{\textquotedblright}.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=GPKTIktA0k}.
+
+\bibitem[Wang et~al.(2023{\natexlab{c}})Wang, Zhang, Xie, Yao, Tian, Wang, Xi, Cheng, Liu, Zheng, et~al.]{wang2023easyedit}
+Peng Wang, Ningyu Zhang, Xin Xie, Yunzhi Yao, Bozhong Tian, Mengru Wang, Zekun Xi, Siyuan Cheng, Kangwei Liu, Guozhou Zheng, et~al.
+\newblock Easyedit: An easy-to-use knowledge editing framework for large language models.
+\newblock \emph{arXiv preprint arXiv:2308.07269}, 2023{\natexlab{c}}.
+
+\bibitem[Li et~al.(2023{\natexlab{b}})Li, Davies, and Nadeau]{li2023circuit}
+Maximilian Li, Xander Davies, and Max Nadeau.
+\newblock Circuit breaking: Removing model behaviors with targeted ablation.
+\newblock \emph{Workshop on Challenges in Deployable Generative AI at International Conference on Machine Learning}, 2023{\natexlab{b}}.
+
+\bibitem[Geva et~al.(2021{\natexlab{b}})Geva, Schuster, Berant, and Levy]{Key-ValueMemories}
+Mor Geva, Roei Schuster, Jonathan Berant, and Omer Levy.
+\newblock Transformer feed-forward layers are key-value memories.
+\newblock In \emph{Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, {EMNLP} 2021, Virtual Event / Punta Cana, Dominican Republic, 7-11 November, 2021}, pages 5484--5495. Association for Computational Linguistics, 2021{\natexlab{b}}.
+\newblock \doi{10.18653/V1/2021.EMNLP-MAIN.446}.
+\newblock URL \url{https://doi.org/10.18653/v1/2021.emnlp-main.446}.
+
+\bibitem[Geva et~al.(2022{\natexlab{b}})Geva, Caciularu, Wang, and Goldberg]{Concepts}
+Mor Geva, Avi Caciularu, Kevin~Ro Wang, and Yoav Goldberg.
+\newblock Transformer feed-forward layers build predictions by promoting concepts in the vocabulary space.
+\newblock In \emph{Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing, {EMNLP} 2022, Abu Dhabi, United Arab Emirates, December 7-11, 2022}, pages 30--45. Association for Computational Linguistics, 2022{\natexlab{b}}.
+\newblock \doi{10.18653/V1/2022.EMNLP-MAIN.3}.
+\newblock URL \url{https://doi.org/10.18653/v1/2022.emnlp-main.3}.
+
+\bibitem[Chen et~al.(2024{\natexlab{c}})Chen, Cao, Chen, Liu, and Zhao]{DBLP:conf/aaai/ChenCCLZ24}
+Yuheng Chen, Pengfei Cao, Yubo Chen, Kang Liu, and Jun Zhao.
+\newblock Journey to the center of the knowledge neurons: Discoveries of language-independent knowledge neurons and degenerate knowledge neurons.
+\newblock In \emph{Thirty-Eighth {AAAI} Conference on Artificial Intelligence, {AAAI} 2024, Thirty-Sixth Conference on Innovative Applications of Artificial Intelligence, {IAAI} 2024, Fourteenth Symposium on Educational Advances in Artificial Intelligence, {EAAI} 2014, February 20-27, 2024, Vancouver, Canada}, pages 17817--17825. {AAAI} Press, 2024{\natexlab{c}}.
+\newblock \doi{10.1609/AAAI.V38I16.29735}.
+\newblock URL \url{https://doi.org/10.1609/aaai.v38i16.29735}.
+
+\bibitem[Chen et~al.(2024{\natexlab{d}})Chen, Cao, Chen, Wang, Liu, Liu, and Zhao]{DaVinci}
+Yuheng Chen, Pengfei Cao, Yubo Chen, Yining Wang, Shengping Liu, Kang Liu, and Jun Zhao.
+\newblock The da vinci code of large pre-trained language models: Deciphering degenerate knowledge neurons.
+\newblock \emph{CoRR}, abs/2402.13731, 2024{\natexlab{d}}.
+\newblock \doi{10.48550/ARXIV.2402.13731}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2402.13731}.
+
+\bibitem[Meng et~al.(2023)Meng, Sharma, Andonian, Belinkov, and Bau]{MEMIT}
+Kevin Meng, Arnab~Sen Sharma, Alex~J. Andonian, Yonatan Belinkov, and David Bau.
+\newblock Mass-editing memory in a transformer.
+\newblock In \emph{The Eleventh International Conference on Learning Representations, {ICLR} 2023, Kigali, Rwanda, May 1-5, 2023}. OpenReview.net, 2023.
+\newblock URL \url{https://openreview.net/pdf?id=MkbcAHIYgyS}.
+
+\bibitem[Wu et~al.(2024)Wu, Wang, Xiao, Peng, and Fu]{wu2024retrieval}
+Wenhao Wu, Yizhong Wang, Guangxuan Xiao, Hao Peng, and Yao Fu.
+\newblock Retrieval head mechanistically explains long-context factuality, 2024.
+
+\bibitem[Jin et~al.(2024)Jin, Cao, Yuan, Chen, Xu, Li, Jiang, Liu, and Zhao]{DBLP:journals/corr/abs-2402-18154}
+Zhuoran Jin, Pengfei Cao, Hongbang Yuan, Yubo Chen, Jiexin Xu, Huaijun Li, Xiaojian Jiang, Kang Liu, and Jun Zhao.
+\newblock Cutting off the head ends the conflict: {A} mechanism for interpreting and mitigating knowledge conflicts in language models.
+\newblock \emph{CoRR}, abs/2402.18154, 2024.
+\newblock \doi{10.48550/ARXIV.2402.18154}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2402.18154}.
+
+\bibitem[Todd et~al.(2023)Todd, Li, Sharma, Mueller, Wallace, and Bau]{DBLP:journals/corr/abs-2310-15213}
+Eric Todd, Millicent~L. Li, Arnab~Sen Sharma, Aaron Mueller, Byron~C. Wallace, and David Bau.
+\newblock Function vectors in large language models.
+\newblock \emph{CoRR}, abs/2310.15213, 2023.
+\newblock \doi{10.48550/ARXIV.2310.15213}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2310.15213}.
+
+\bibitem[Dutta et~al.(2024)Dutta, Singh, Chakrabarti, and Chakraborty]{DBLP:journals/corr/abs-2402-18312}
+Subhabrata Dutta, Joykirat Singh, Soumen Chakrabarti, and Tanmoy Chakraborty.
+\newblock How to think step-by-step: {A} mechanistic understanding of chain-of-thought reasoning.
+\newblock \emph{CoRR}, abs/2402.18312, 2024.
+\newblock \doi{10.48550/ARXIV.2402.18312}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2402.18312}.
+
+\bibitem[nostalgebraist(2020{\natexlab{b}})]{logitlens}
+nostalgebraist.
+\newblock interpreting gpt: the logit lens.
+\newblock \url{https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens}, 2020{\natexlab{b}}.
+
+\bibitem[Yuksekgonul et~al.(2024)Yuksekgonul, Chandrasekaran, Jones, Gunasekar, Naik, Palangi, Kamar, and Nushi]{yuksekgonul2024attention}
+Mert Yuksekgonul, Varun Chandrasekaran, Erik Jones, Suriya Gunasekar, Ranjita Naik, Hamid Palangi, Ece Kamar, and Besmira Nushi.
+\newblock Attention satisfies: A constraint-satisfaction lens on factual errors of language models.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=gfFVATffPd}.
+
+\bibitem[Dalvi et~al.(2023)Dalvi, Sajjad, and Durrani]{NeuroX}
+Fahim Dalvi, Hassan Sajjad, and Nadir Durrani.
+\newblock Neurox library for neuron analysis of deep {NLP} models.
+\newblock In \emph{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics: System Demonstrations, {ACL} 2023, Toronto, Canada, July 10-12, 2023}, pages 226--234. Association for Computational Linguistics, 2023.
+
+\bibitem[Mossing et~al.(2024)Mossing, Bills, Tillman, Dupré~la Tour, Cammarata, Gao, Achiam, Yeh, Leike, Wu, and Saunders]{mossing2024tdb}
+Dan Mossing, Steven Bills, Henk Tillman, Tom Dupré~la Tour, Nick Cammarata, Leo Gao, Joshua Achiam, Catherine Yeh, Jan Leike, Jeff Wu, and William Saunders.
+\newblock Transformer debugger.
+\newblock \url{https://github.com/openai/transformer-debugger}, 2024.
+
+\bibitem[Ghandeharioun et~al.(2024)Ghandeharioun, Caciularu, Pearce, Dixon, and Geva]{ghandeharioun2024patchscopes}
+Asma Ghandeharioun, Avi Caciularu, Adam Pearce, Lucas Dixon, and Mor Geva.
+\newblock Patchscopes: A unifying framework for inspecting hidden representations of language models, 2024.
+
+\bibitem[Elhage et~al.(2022)Elhage, Hume, Olsson, Schiefer, Henighan, Kravec, Hatfield{-}Dodds, Lasenby, Drain, Chen, Grosse, McCandlish, Kaplan, Amodei, Wattenberg, and Olah]{DBLP:journals/corr/abs-2209-10652}
+Nelson Elhage, Tristan Hume, Catherine Olsson, Nicholas Schiefer, Tom Henighan, Shauna Kravec, Zac Hatfield{-}Dodds, Robert Lasenby, Dawn Drain, Carol Chen, Roger Grosse, Sam McCandlish, Jared Kaplan, Dario Amodei, Martin Wattenberg, and Christopher Olah.
+\newblock Toy models of superposition.
+\newblock \emph{CoRR}, abs/2209.10652, 2022.
+\newblock \doi{10.48550/ARXIV.2209.10652}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2209.10652}.
+
+\end{thebibliography}

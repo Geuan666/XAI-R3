@@ -1,0 +1,70 @@
+\begin{table*}[h!]
+\vspace{-5pt}
+\small
+    \centering
+    \footnotesize
+    \caption{\small Number of examples per relation and the count of accurate predictions by different LMs. This table is borrowed from \citet{hernandez2024linearity} and here we sampled with different ways. 
+    }
+    \begin{tabular}{l|l r | c c c}
+        \toprule
+         \multirow{2}{2em}{\textbf{Category}} & \multirow{2}{3.5em}{\textbf{Relation}}& \multirow{2}{1em}{\textbf{\#}} & \multicolumn{3}{c}{\textbf{\# Correct in Hit@10}}\\
+       & & &  \textbf{GPT2-Medium} & \textbf{GPT2-large} & \textbf{TinyLLaMA}\\
+        \midrule
+         \multirow{26}{*}{factual}
+& person mother             & $994$ & $83$ & $144$ & $361$ \\ 
+& person father             & $991$ & $359$ & $385$ & 474 \\ 
+& person sport position     & $952$ & $400$ & $489$ &  596 \\ 
+& landmark on continent     & $947$ & $835$ & $543$ &  694 \\ 
+& person native language    & $919$ & $310$ & $220$ & $260$ \\ 
+& landmark in country       & $836$ & $600$ & $489$ & 709\\ 
+& person occupation         & $821$ & $57$  & $76$  &  149 \\ 
+& company hq                & $674$ & $308$ & $312$ & 470 \\ 
+& product by company        & $522$ & $422$ & $432$   & 460 \\ 
+& person plays instrument   & $513$ & $510$ & $505$ & 498 \\ 
+& star constellation name   & $362$ & $266$ & $148$ & 297 \\ 
+& plays pro sport           & $318$ & $317$ & $316$ & 315 \\ 
+& company CEO               & $298$ & $20$  & $52$  & 125 \\ 
+& superhero person          & $100$ & $28$  & $35$   & 50 \\ 
+& superhero archnemesis     & $96$  & $6$   & $6$  & 23 \\ 
+& person university         & $91$  & $14$  & $37$  & 35 \\ 
+& pokemon evolution         & $44$  & $11$  & $13$  & 16\\ 
+& country currency          & $30$  & $25$  & $25$  & $30$\\ 
+& food from country         & $30$  & $23$  & $25$  & 29 \\ 
+& city in country           & $27$  & $20$  & $23$  & 27 \\ 
+& country capital city      & $24$  & $24$  & $24$  & 24 \\ 
+& country language          & $24$  & $24$  & $24$   & 24 \\ 
+& country largest city      & $24$  & $24$  & $24$  & 24 \\ 
+& person lead singer of band& $21$  & $7$   & $16$  & 21 \\ 
+& president birth year      & $19$  & $11$  & $12$   & -\\ 
+& president election year   & $19$  & $17$  & $18$   & -\\ 
+\hline
+         \multirow{8}{*}{commonsense}
+& object superclass         & $76$  & $62$  & $64$  & $72$\\ 
+& word sentiment            & $60$  & $14$  & $9$ & $34$ \\ 
+& task done by tool         & $52$  & $44$  & $45$  & $45$ \\ 
+& substance phase of matter & $50$  & $12$  & $16$  & $48$\\ 
+& work location             & $38$  & $28$  & $24$  & $27$ \\ 
+& fruit inside color        & $36$  & $36$  & $35$   & $36$ \\ 
+& task person type          & $32$  & $28$  & $27$  & $26$ \\ 
+& fruit outside color       & $30$  & $16$  & $20$   & $21$ \\ 
+\hline
+        \multirow{6}{*}{linguistic}
+& word first letter         & $241$ & $236$ & $235$ & 241 \\ 
+& word last letter          & $241$ & $135$ & $73$   & 114 \\ 
+& adjective antonym         & $100$ & $80$  & $81$  & 84 \\ 
+& adjective superlative     & $80$  & $24$  & $19$  & 63 \\ 
+& verb past tense           & $76$  & $1$   & $15$  & 76 \\ 
+& adjective comparative     & $68$  & $7$   & $15$  & 63 \\ 
+\hline
+            \multirow{7}{*}{bias}
+& occupation age            & $45$  & $18$  & $20$  & $18$ \\ 
+& univ degree gender        & $38$  & $14$  & $35$  &  $38$ \\ 
+& name birthplace           & $31$  & $29$  & $30$  & $31$ \\ 
+& name religion             & $31$  & $24$  & $31$  & $31$\\ 
+& characteristic gender     & $30$  & $26$  & $30$  & $30$\\ 
+& name gender               & $19$  & $19$  & $19$  & $19$\\ 
+& occupation gender         & $19$  & $19$  & $19$  & $19$\\ 
+        \bottomrule
+    \end{tabular}
+    \label{tab:full-dataset}
+\end{table*}
